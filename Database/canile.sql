@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Dic 19, 2022 alle 16:54
+-- Creato il: Dic 19, 2022 alle 17:42
 -- Versione del server: 10.4.25-MariaDB
 -- Versione PHP: 8.1.10
 
@@ -46,7 +46,7 @@ CREATE TABLE `cani` (
   `eta` int(11) NOT NULL,
   `sesso` varchar(1) NOT NULL,
   `sterilizzazione` tinyint(1) NOT NULL,
-  `vaccini` varchar(255) NOT NULL,
+  `vaccinazioni` varchar(255) NOT NULL,
   `mircrochip` tinyint(1) NOT NULL,
   `descrizione` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -69,7 +69,7 @@ ALTER TABLE `cani`
   ADD KEY `microchip` (`mircrochip`),
   ADD KEY `sesso` (`sesso`),
   ADD KEY `steriliz` (`sterilizzazione`),
-  ADD KEY `vaccino` (`vaccini`);
+  ADD KEY `vaccino` (`vaccinazioni`);
 
 --
 -- AUTO_INCREMENT per le tabelle scaricate
