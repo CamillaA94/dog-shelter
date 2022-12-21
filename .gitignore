@@ -24,3 +24,8 @@ hs_err_pid*
 
 .classpath
 .project
+# Java annotation processor (APT)
+.factorypath
+
+bin/
+.settings/
