@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="profilo")
+@Table(name="admin")
 public class Admin implements Serializable{
 
 	private static final long serialVersionUID = -910252220609684153L;

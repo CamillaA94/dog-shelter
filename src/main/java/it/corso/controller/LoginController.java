@@ -34,7 +34,7 @@ public class LoginController {
         if(session.getAttribute("logged") != null)
             return "redirect:/reserved";
         if(!adminService.login(username, password, session))
-            return "redirect:/log?er";
+            return "redirect:/login?er";
         return "redirect:/riservata";
     }
 }

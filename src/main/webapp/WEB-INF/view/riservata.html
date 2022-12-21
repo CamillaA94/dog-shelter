@@ -16,7 +16,7 @@
 		
 		<br><br>
 	
-		<form action="riservata/salva" method="POST">
+		<form action="riservata/salva" method="POST" enctype="multipart/form-data">
 					<input type="hidden" id="id" name="id" th:value="${cane.id}">
 					<label for="nome" th:text="#{label.nome}"></label>
 					<input type="text" id="nome" name="nome" required="required" th:value="${cane.nome}">
@@ -69,6 +69,23 @@
 					<br>
 					<label for="arrivo" th:text="#{label.data}"></label>
 					<input type="date" id="arrivo" name="arrivo" required="required" th:value="${cane.arrivo}">
+					<br>
+					<label for="immagine" th:text="#{label.immagine} + ':'"></label>
+					<input type="file" id="immagine" name="immagine">
+					<br>
+					<img th:if="${cane.immagine}" th:src="@{'static/cani/' + ${cane.id} + '.png'}" style="width:160px;max-width:160px;height:180px;max-height:180px;">
+					<br>
+					<label for="immagine2" th:text="#{label.immagine2} + ':'"></label>
+					<input type="file" id="immagine2" name="immagine2">
+					<a th:if="${cane.immagine2}" th:href="@{riservata/eliminaimmagine2(id=${cane.id})}" th:text="#{button.eliminaimmagine}"></a>
+					<br>
+					<img th:if="${cane.immagine2}" th:src="@{'static/cani/' + ${cane.id} + 'b.png'}" style="width:160px;max-width:160px;height:180px;max-height:180px;">
+					<br>
+					<label for="immagine3" th:text="#{label.immagine3} + ':'"></label>
+					<input type="file" id="immagine3" name="immagine3">
+					<a th:if="${cane.immagine3}" th:href="@{riservata/eliminaimmagine3(id=${cane.id})}" th:text="#{button.eliminaimmagine}"></a>
+					<br>
+					<img th:if="${cane.immagine3}" th:src="@{'static/cani/' + ${cane.id} + 'c.png'}" style="width:160px;max-width:160px;height:180px;max-height:180px;">
 					<br>
 					<input type="submit" th:value="#{button.salva}">
 					<a th:href="@{riservata/elimina(id=${cane.id})}" th:text="#{button.elimina}"></a>

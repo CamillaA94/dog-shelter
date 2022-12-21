@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "cani")
@@ -48,6 +49,15 @@ public class Cane implements Serializable {
 	@Temporal(TemporalType.DATE)
 	private Date arrivo;
 
+	@Transient
+	private boolean immagine;
+	
+	@Transient
+	private boolean immagine2;
+	
+	@Transient
+	private boolean immagine3;
+	
 	public int getId() {
 		return id;
 	}
@@ -126,5 +136,29 @@ public class Cane implements Serializable {
 
 	public void setArrivo(Date arrivo) {
 		this.arrivo = arrivo;
+	}
+
+	public boolean isImmagine() {
+		return immagine;
+	}
+
+	public void setImmagine(boolean immagine) {
+		this.immagine = immagine;
+	}
+
+	public boolean isImmagine2() {
+		return immagine2;
+	}
+
+	public void setImmagine2(boolean immagine2) {
+		this.immagine2 = immagine2;
+	}
+
+	public boolean isImmagine3() {
+		return immagine3;
+	}
+
+	public void setImmagine3(boolean immagine3) {
+		this.immagine3 = immagine3;
 	}
 }
