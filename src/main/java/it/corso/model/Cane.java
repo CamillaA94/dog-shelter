@@ -1,13 +1,14 @@
 package it.corso.model;
 import java.io.Serializable;
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.Digits;
-import javax.validation.constraints.Pattern;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 @Table(name = "cani")
@@ -19,35 +20,33 @@ public class Cane implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@Pattern(regexp = "[a-zA-Z\\s'àèéìòù]{1,30}", message = "#")
 	@Column(name = "nome", length = 30, nullable = false)
 	private String nome;
-	
-	@Pattern(regexp = "[a-zA-Z\\s'àèéìòù]{1,30}", message = "#")
+
 	@Column(name = "razza", length = 30, nullable = false)
 	private String razza;
 	
-	@Digits(integer = 11, fraction = 0, message = "#")
 	@Column(name = "eta", nullable = false)
 	private int eta;
 	
-	@Pattern(regexp = "[MF]{1}", message = "#")
 	@Column(name = "sesso", length = 1, nullable = false)
-	private char sesso;
+	private String sesso;
 	
 	@Column(name = "sterilizzazione", nullable = false)
 	private boolean sterilizzazione;
 	
-	@Pattern(regexp = "a-zA-Z\\s&/(),;.-°'àèéìòù{1,255}", message = "#")
 	@Column(name = "vaccinazioni", length = 255, nullable = false)
 	private String vaccinazioni;
 	
 	@Column(name = "microchip", nullable = false)
 	private boolean microchip;
 	
-	@Pattern(regexp = "[a-zA-Z\\s!,;.-°'àèéìòù]{1,255}", message = "#")
 	@Column(name = "descrizione", length = 255, nullable = false)
 	private String descrizione;
+	
+	@Column(name = "arrivo", nullable = false)
+	@Temporal(TemporalType.DATE)
+	private Date arrivo;
 
 	public int getId() {
 		return id;
@@ -81,11 +80,11 @@ public class Cane implements Serializable {
 		this.eta = eta;
 	}
 
-	public char getSesso() {
+	public String getSesso() {
 		return sesso;
 	}
 
-	public void setSesso(char sesso) {
+	public void setSesso(String sesso) {
 		this.sesso = sesso;
 	}
 
@@ -97,12 +96,12 @@ public class Cane implements Serializable {
 		this.sterilizzazione = sterilizzazione;
 	}
 
-	public String getVaccini() {
+	public String getVaccinazioni() {
 		return vaccinazioni;
 	}
 
-	public void setVaccini(String vaccini) {
-		this.vaccinazioni = vaccini;
+	public void setVaccinazioni(String vaccinazioni) {
+		this.vaccinazioni = vaccinazioni;
 	}
 
 	public boolean isMicrochip() {
@@ -119,5 +118,13 @@ public class Cane implements Serializable {
 
 	public void setDescrizione(String descrizione) {
 		this.descrizione = descrizione;
+	}
+
+	public Date getArrivo() {
+		return arrivo;
+	}
+
+	public void setArrivo(Date arrivo) {
+		this.arrivo = arrivo;
 	}
 }
