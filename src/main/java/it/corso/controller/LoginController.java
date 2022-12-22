@@ -21,6 +21,7 @@ public class LoginController {
     @GetMapping
     public String getPage(@RequestParam(name = "er", required = false) String er, Model model) {
         boolean errore = er != null;
+        model.addAttribute("titolo", "Login");
         model.addAttribute("errore", errore);
         return "log";
     }
