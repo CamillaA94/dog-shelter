@@ -14,26 +14,50 @@
 /*pagina donazioni*/
 
 .testoDonaz {
-    background-color: #519b8a70;
+    background-color: #519B8A;
+    color: white;
     padding: 5%;
     border-radius: 2%;
 }
 
+.padfoto {
+    padding-top: 1%;
+}
+
+.Dona2{
+    background-color: #FBB74D;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    text-align: center;
+    color: black;
+}
+
+.titoloiter {
+    text-align:center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.iter {
+    text-align: center;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.home {
+    padding-top: 3%;
+}
+.posfoto {
+    align-items: center;
+}
+/*chi siamo*/
 .mappa {
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: 50%;
     width: 90%;
 }
-.Dona2{
-    background-color: #49494915;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    margin-top: 3%;
-    margin-bottom: 3%;
-
-}
-
 .orario {
     margin-top: 10px;
     margin-bottom: 10px;
