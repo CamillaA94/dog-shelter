@@ -2,13 +2,16 @@ package it.corso.service;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import it.corso.dao.CaneDao;
 import it.corso.model.Cane;
+
 
 @Service
 public class CaneServiceImpl implements CaneService {
@@ -50,8 +53,27 @@ public class CaneServiceImpl implements CaneService {
 	}
 
 	@Override
-	public List<Cane> getCani() {
-		return (List<Cane>)caneDao.findAll();
+	public List<Cane> getCaniAlfabetico() {
+		List<Cane> cani = (List<Cane>)caneDao.findAll();
+		Comparator<Cane> ordineArrivo = Comparator.comparing(Cane::getNome);
+		cani = cani.stream().sorted(ordineArrivo).collect(Collectors.toList());
+		return cani;
+	}
+	
+	@Override
+	public List<Cane> getCaniPrimi() {
+		List<Cane> cani = (List<Cane>)caneDao.findAll();
+		Comparator<Cane> ordineArrivo = Comparator.comparing(Cane::getArrivo);
+		cani = cani.stream().sorted(ordineArrivo).collect(Collectors.toList());
+		return cani;
+	}
+	
+	@Override
+	public List<Cane> getCaniUltimi() {
+		List<Cane> cani = (List<Cane>)caneDao.findAll();
+		Comparator<Cane> ultimiArrivati = Comparator.comparing(Cane::getArrivo).reversed();
+		cani = cani.stream().sorted(ultimiArrivati).collect(Collectors.toList());
+		return cani;
 	}
 
 	@Override
@@ -62,9 +84,10 @@ public class CaneServiceImpl implements CaneService {
 
 	@Override
 	public boolean checkCane(String... dati) {
-		if(Pattern.matches(REGEX, dati[0]) && Pattern.matches(REGEX, dati[1]) && Pattern.matches(REGEXD, dati[2])) {
-			return true;
-		}
+		if(dati[0] != "" && dati[1] != "" && dati[2] != "")
+			if(Pattern.matches(REGEX, dati[0]) && Pattern.matches(REGEX, dati[1]) && Pattern.matches(REGEXD, dati[2])) 
+				return true;
 		return false;
 	}
+	
 }
