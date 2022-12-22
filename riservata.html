@@ -27,6 +27,9 @@
     background-color: #04AA6D;
     border-color: #04AA6D;
       }
+      img{
+        max-width:260px;
+      }
     </style>
 
   </head>
@@ -35,10 +38,14 @@
   <h3>Benvenuto nell'area riservata</h3>
   <h4>Inserisci qui i dati</h4>
 </div>
+<div class="container">
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-6">
 <!--form inserimento dati-->
 <form class="form_amministrativo">
   <form class="row g-3 needs-validation" novalidate>
-    <div class="col-md-3">
+    <div class="col-md-5">
       <!--Campo 1-->
       <label for="validationCustom04" class="form-label">Scegli cane:</label>
       <select class="form-select" id="validationCustom04" required>
@@ -47,17 +54,17 @@
       </select>
     </div>
     <!--Campo 2-->
-    <div class="col-md-3">
+    <div class="col-md-5">
       <label for="validationCustom01" class="form-label">Nome:</label>
       <input type="text" class="form-control" id="validationCustom01" value="" required>
     </div>
     <!--Campo 3-->
-    <div class="col-md-3">
+    <div class="col-md-5">
       <label for="validationCustom02" class="form-label">Razza:</label>
       <input type="text" class="form-control" id="validationCustom02" value="" required>
     </div>
     <!--Campo 4-->
-    <div class="col-md-3">
+    <div class="col-md-5">
       <label for="validationCustom04" class="form-label">Età:</label>
       <select class="form-select" id="validationCustom04" required>
         <option selected disabled value="">Seleziona</option>
@@ -68,7 +75,7 @@
       </select>
     </div>
     <!--Campo 5-->
-    <div class="col-md-3">
+    <div class="col-md-5">
       <label for="validationCustom04" class="form-label">Sesso:</label>
       <select class="form-select" id="validationCustom04" required>
         <option selected disabled value="">Seleziona</option>
@@ -76,22 +83,10 @@
         <option>F</option>
       </select>
     </div>
-    <!--Campo 6-->
-    <div>Sterilizzazione:</div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-      <label class="form-check-label" for="flexRadioDefault1">
-        SI
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-      <label class="form-check-label" for="flexRadioDefault2">
-        NO
-      </label>
-    </div>
-    <!-- Campo 7 tipi di vaccinazioni-->
-    <div class="form-check form-check-inline">
+    
+    <!-- Campo 6 tipi di vaccinazioni-->
+    <div>Vaccinazioni:</div>
+    <div class="form-check form-check">
       <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
       <label class="form-check-label" for="inlineCheckbox1">Parvovirus canino</label>
     </div>
@@ -99,51 +94,65 @@
       <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
       <label class="form-check-label" for="inlineCheckbox2">Cimurro canino</label>
     </div>
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option2">
+    <div class="form-check form-check">
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
       <label class="form-check-label" for="inlineCheckbox2">Epatite</label>
     </div>
     <div class="form-check form-check-inline">
-      <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
       <label class="form-check-label" for="inlineCheckbox2">Leptospirosi</label>
     </div>
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option2">
+    <div class="form-check form-check">
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
       <label class="form-check-label" for="inlineCheckbox2">Rabbia</label>
     </div>
     <div class="form-check form-check-inline">
-      <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option2">
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6">
       <label class="form-check-label" for="inlineCheckbox2">Bordetella</label>
     </div>
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option2">
+    <div class="form-check form-check">
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7">
       <label class="form-check-label" for="inlineCheckbox2">Influenza canina</label>
     </div>
     <div class="form-check form-check-inline">
-      <input class="form-check-input" type="checkbox" id="inlineCheckbox8" value="option2">
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox8" value="option8">
       <label class="form-check-label" for="inlineCheckbox2">Vaccino di Lyme</label>
     </div>
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="checkbox" id="inlineCheckbox9" value="option2">
+    <div class="form-check form-check">
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox9" value="option9">
       <label class="form-check-label" for="inlineCheckbox2">Leishmania</label>
+    </div>
+    <!--Campo 7-->
+    <div>Sterilizzazione:</div>
+    <div class="form-check-inline">
+      <input class="form-check-input" type="radio" name="sterilizzazione" id="flexRadioDefault1">
+      <label class="form-check-label" for="flexRadioDefault1">
+        SI
+      </label>
+    </div>
+    <div class="form-check-inline">
+      <input class="form-check-input" type="radio" name="sterilizzazione" id="flexRadioDefault2" checked>
+      <label class="form-check-label" for="flexRadioDefault2">
+        NO
+      </label>
     </div>
     <!--Campo 8-->
 <div>Microchip:</div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+    <div class="form-check-inline">
+      <input class="form-check-input" type="radio" name="microchip" id="flexRadioDefault3">
       <label class="form-check-label" for="flexRadioDefault3">
         SI
       </label>
     </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+    <div class="form-check-inline">
+      <input class="form-check-input" type="radio" name="microchip" id="flexRadioDefault4" checked>
       <label class="form-check-label" for="flexRadioDefault4">
         NO
       </label>
     </div>
     
     <!--Campo 9-->
-    <div class="col-md-3">
+    <div class="col-md-5">
       <label for="validationCustom05" class="form-label">Descrizione</label>
       <input type="text" class="form-control" id="validationCustom05" required>
     </div>
@@ -154,15 +163,46 @@
       value="2018-07-22 "
       min="2018-01-01" max="2023-01-01" style="width:300px ; padding-left: 2px; color: grey;">
     </div>
+    <!--Campo 11 scelta foto-->
+<div>Scegli foto:</div>
+<div class="col-md-5">
+    <div class="input-group mb-3">
+      <input type="file" class="form-control" id="inputGroupFile01"> 
+    </div>
+    <div>
+      <img src="...">
+      <a class= "btn btn-danger" href="...">Elimina</a>
+    
+
+    <div class="input-group mb-3">
+      <input type="file" class="form-control" id="inputGroupFile02">
+    </div>
+    <div>
+      <img src="..." >
+      <a class= "btn btn-danger" href="...">Elimina</a>
+    </div>
+
+    <div class="input-group mb-3">
+      <input type="file" class="form-control" id="inputGroupFile03">     
+    </div>
+    <div>
+      <img src="...">
+      <a class= "btn btn-danger" href="...">Elimina</a>
+    </div>
+  </div>
     <!--Bottone Salva-->
     <div class="col-12">
       <button class="btn btn-primary" type="submit">Salva</button>
+      <button class="btn btn-primary" type="submit">Elimina</button>
     </div>
   </form>
     
 </form>
 <!--fine form inserimento dati-->
-
+<div class="col-4"></div>
+</div>
+</div>
+</div>
 
 
 
