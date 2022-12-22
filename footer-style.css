@@ -7,22 +7,31 @@ html,body {
 #footer {
     position: absolute;
     bottom:0;
-    left:0;
     width:100%;
     font-size: 15px;
     background-color: #519B8A;
     color:white;
   }
 
-  .footer_center {
+.footer_center {
     text-align: center;
-    margin-left: auto;
+    margin-left: 2%;
     margin-right: auto; 
   }
 
-  .footer_align{
+.footer_align{
     text-align: left;
   }
+
+.padimg { /*padding imgfooter*/
+  padding-top:2%;
+  padding-left:0;
+}
+
+.padcontent {    /*padding footer*/
+  padding-top: 3%;
+  padding-left: 2%;
+}
   
   ul {    /*gestione lista*/
     list-style-type: none;
@@ -32,25 +41,19 @@ html,body {
 
   a {            /*gestione link*/
     text-decoration: none;
-    text-decoration: white;
+    color: white;
   }
-  a:visited {
+  /*.linkstyle:visited {
     color:#d1d8d8;
   }
-  a:active {
-    color:white;
-  }
+  .linkstyle:active {
+    color:white !important;
+  }*/
     
-  a:hover {
-    color:aquamarine;
+  .linkstyle:hover {
+    color:#03cc9d;
   }
  
-
-#padcontent {    /*padding superiore footer*/
-    padding-top: 50px;
-}
-
-
 /*gestione newsletter*/
 .position {
   position:relative;
