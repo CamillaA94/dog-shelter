@@ -1,18 +1,43 @@
+/* pagina chi siamo*/
+.TestoChi {
+    background-color:#519b8a70;
+    padding: 5%;  
+}
+
+.container{
+    margin-top: 3%;
+    margin-left: 3%;
+}
+
+/*pagina donazioni*/
+
+.testoDonaz {
+    background-color: #519b8a70;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
 .mappa {
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: 50%;
     width: 90%;
 }
-    
-
 .orario {
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-right: 50%;
-   
-   
+    margin-right: 50%;    
 }
+.list-group-item.active {
+    background-color: #519B8A;
+}
+.list-group-item {
+    background-color: #FBB74D;
+}
+
+
 /* CARD ADOZIONI */
 .profile-card-4 {
     max-width: 300px;
@@ -88,3 +113,5 @@
     transform: rotate(5deg) scale(1.1, 1.1);
     filter: brightness(110%);
 }
+
+/*fine card*/
