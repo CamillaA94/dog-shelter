@@ -69,7 +69,7 @@ public class RiservataController {
 			HttpSession session)
 	{
 		if(!caneService.checkCane(nome, razza, descrizione))
-			return "redirect:/riservata?errore";
+			return "redirect:/riservata?er";
 		Cane cane = id != 0 ? caneService.getCaneById(id) : new Cane();
 		caneService.registraCane(cane, id, nome, razza, eta, sesso, sterilizzazione, vax, microchip, descrizione, data);
 		if(!immagine.isEmpty())
