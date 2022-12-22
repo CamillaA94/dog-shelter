@@ -9,87 +9,95 @@
     <link type="text/css" rel="stylesheet" href="../FRONT/bootstrap-5.2.3-dist/css/bootstrap.min.css">
     <link type="text/js" rel="stylesheet" href="../FRONT/bootstrap-5.2.3-dist/js/bootstrap.min.js">
     <link type="text/css" rel="stylesheet" href="homepage.css">
-    <style>
-        .profile-card-4 {
-        max-width: 300px;
-        background-color: #FFF;
-        border-radius: 5px;
-        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        position: relative;
-        margin: 10px auto;
-        cursor: pointer;
-    }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     
-    .profile-card-4 img {
-        transition: all 0.25s linear;
-    }
-    
-    .profile-card-4 .profile-content {
-        position: relative;
-        padding: 15px;
-        background-color: #FFF;
-    }
-    
-    .profile-card-4 .profile-name {
-        font-weight: bold;
-        position: absolute;
-        left: 0px;
-        right: 0px;
-        top: -70px;
-        color: #FFF;
-        font-size: 17px;
-    }
-    
-    .profile-card-4 .profile-name p {
-        font-weight: 600;
-        font-size: 13px;
-        letter-spacing: 1.5px;
-    }
-    
-    .profile-card-4 .profile-description {
-        color: #777;
-        font-size: 12px;
-        padding: 10px;
-    }
-    
-    .profile-card-4 .profile-overview {
-        padding: 15px 0px;
-    }
-    
-    .profile-card-4 .profile-overview p {
-        font-size: 10px;
-        font-weight: 600;
-        color: #777;
-    }
-    
-    .profile-card-4 .profile-overview h4 {
-        color: #273751;
-        font-weight: bold;
-    }
-    
-    .profile-card-4 .profile-content::before {
-        content: "";
-        position: absolute;
-        height: 20px;
-        top: -10px;
-        left: 0px;
-        right: 0px;
-        background-color: #FFF;
-        z-index: 0;
-        transform: skewY(3deg);
-    }
-    
-    .profile-card-4:hover img {
-        transform: rotate(5deg) scale(1.1, 1.1);
-        filter: brightness(110%);
-    }
-    h2.titolo{
-        text-align: center;
-        padding-bottom: 5%;
-        color: #4E4D4C;
-    }
-      </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+ 
+  <script src='main.js'></script>
+  <style>
+    .profile-card-4 {
+    max-width: 300px;
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+.profile-card-4 img {
+    transition: all 0.25s linear;
+}
+
+.profile-card-4 .profile-content {
+    position: relative;
+    padding: 15px;
+    background-color: #FFF;
+}
+
+.profile-card-4 .profile-name {
+    font-weight: bold;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: -70px;
+    color:black;
+    font-size: 17px;
+}
+
+.profile-card-4 .profile-name p {
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+}
+
+.profile-card-4 .profile-description {
+    color: #777;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.profile-card-4 .profile-overview {
+    padding: 15px 0px;
+}
+
+.profile-card-4 .profile-overview p {
+    font-size: 10px;
+    font-weight: 600;
+    color: #777;
+}
+
+.profile-card-4 .profile-overview h4 {
+    color: #273751;
+    font-weight: bold;
+}
+
+.profile-card-4 .profile-content::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    top: -10px;
+    left: 0px;
+    right: 0px;
+    background-color: #FFF;
+    z-index: 0;
+    transform: skewY(3deg);
+}
+
+.profile-card-4:hover img {
+    transform: rotate(5deg) scale(1.1, 1.1);
+    filter: brightness(110%);
+}
+h2.titolo{
+    text-align: center;
+    padding-bottom: 5%;
+    color: #4E4D4C;
+}
+
+
+
+  </style>
 </head>
 
 <body>
@@ -119,19 +127,19 @@
     </div>
     <!--fine  navbar-->
 
-   
+    
                 <h2 class="titolo"> Adotta la tua anima gemella
                     a quattro zampe </h2>
             
 
 
-    <!--cards cani-->
+    <!--colonne-->
     <div class="container">
         <div class="row">
             <!--prima card-->
             <div class="col-12 col-md-4">
                 <div class="profile-card-4 text-center"><img
-                    src="idcane16064id129452.jpg"
+                    src="../dog-shelter/img/idcane16064id129452.jpg"
                     class="img img-responsive">
                 <div class="profile-content">
                     <div class="profile-name">NOME
@@ -144,7 +152,7 @@
             <!--seconda card-->
             <div class="col-12 col-md-4">
                     <div class="profile-card-4 text-center"><img
-                        src="idcane16089id129520.jpg"
+                        src="../dog-shelter/img/idcane16089id129520.jpg"
                         class="img img-responsive">
                     <div class="profile-content">
                         <div class="profile-name">NOME
@@ -157,7 +165,7 @@
             <!--terza card-->
             <div class="col-12 col-md-4">
                 <div class="profile-card-4 text-center"><img
-                    src="idcane16036id128902.jpg"
+                    src="../dog-shelter/img/idcane16036id128902.jpg"
                     class="img img-responsive">
                 <div class="profile-content">
                     <div class="profile-name">NOME
@@ -169,8 +177,14 @@
             </div>
         </div>
     </div>
- 
-    <!--fine cards-->
+    
+    
+
+   
+    
+
+
+
 
 </body>
 
