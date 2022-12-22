@@ -23,7 +23,7 @@ public class LoginController {
         boolean errore = er != null;
         model.addAttribute("titolo", "Login");
         model.addAttribute("errore", errore);
-        return "log";
+        return "login";
     }
     
     @PostMapping
@@ -33,7 +33,7 @@ public class LoginController {
             HttpSession session, 
             Model model) {
         if(session.getAttribute("logged") != null)
-            return "redirect:/reserved";
+            return "redirect:/riservata";
         if(!adminService.login(username, password, session))
             return "redirect:/login?er";
         return "redirect:/riservata";
