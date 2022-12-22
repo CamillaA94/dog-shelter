@@ -40,8 +40,9 @@ public class RiservataController {
 		String filePath3 = rootDir + "static\\cani\\" + id + "c.png";
 		File file3 = new File(filePath3);
 		cane.setImmagine3(file3.exists());
+		model.addAttribute("titolo", "Area riservata");
 		model.addAttribute("cane", cane);
-		model.addAttribute("cani", caneService.getCani());
+		model.addAttribute("cani", caneService.getCaniAlfabetico());
 		return "riservata";
 	}
 	
@@ -73,9 +74,9 @@ public class RiservataController {
 		caneService.registraCane(cane, id, nome, razza, eta, sesso, sterilizzazione, vax, microchip, descrizione, data);
 		if(!immagine.isEmpty())
 			salvaImmagine(cane.getId(), immagine, session);
-		if(immagine2 != null && !immagine.isEmpty())
+		if(immagine2 != null && !immagine2.isEmpty())
 			salvaImmagine2(cane.getId(), immagine2, session);
-		if(immagine3 != null && !immagine.isEmpty())
+		if(immagine3 != null && !immagine3.isEmpty())
 			salvaImmagine3(cane.getId(), immagine3, session);
 		return "redirect:/riservata";
 	}

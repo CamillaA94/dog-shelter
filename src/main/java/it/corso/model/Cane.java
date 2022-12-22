@@ -42,7 +42,7 @@ public class Cane implements Serializable {
 	@Column(name = "microchip", nullable = false)
 	private boolean microchip;
 	
-	@Column(name = "descrizione", length = 255, nullable = false)
+	@Column(name = "descrizione", nullable = false)
 	private String descrizione;
 	
 	@Column(name = "arrivo", nullable = false)
