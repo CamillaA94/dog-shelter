@@ -77,6 +77,46 @@ public class CaneServiceImpl implements CaneService {
 	}
 
 	@Override
+	public List<Cane> getCaniEtaCrescente() {
+		List<Cane> cani = (List<Cane>)caneDao.findAll();
+		Comparator<Cane> eta = Comparator.comparing(Cane::getEta);
+		cani = cani.stream().sorted(eta).collect(Collectors.toList());
+		return cani;
+	}
+
+	@Override
+	public List<Cane> getCaniEtaDecrescente() {
+		List<Cane> cani = (List<Cane>)caneDao.findAll();
+		Comparator<Cane> eta = Comparator.comparing(Cane::getEta).reversed();
+		cani = cani.stream().sorted(eta).collect(Collectors.toList());
+		return cani;
+	}
+
+	@Override
+	public List<Cane> getCaniMaschi() {
+		List<Cane> cani = (List<Cane>)caneDao.findAll();
+		Comparator<Cane> ordineArrivo = Comparator.comparing(Cane::getNome);
+		cani = cani.stream().sorted(ordineArrivo).collect(Collectors.toList());
+		for(Cane cane : cani) {
+			if(cane.getSesso().equals("F"))
+				cani.remove(cane.getId());
+		}
+		return cani;
+	}
+
+	@Override
+	public List<Cane> getCaniFemmine() {
+		List<Cane> cani = (List<Cane>)caneDao.findAll();
+		Comparator<Cane> ordineArrivo = Comparator.comparing(Cane::getNome);
+		cani = cani.stream().sorted(ordineArrivo).collect(Collectors.toList());
+		for(Cane cane : cani) {
+			if(cane.getSesso().equals("M"))
+				cani.remove(cane.getId());
+		}
+		return cani;
+	}
+	
+	@Override
 	public void cancellaCane(Cane cane) {
 		caneDao.save(cane);
 		caneDao.delete(cane);
