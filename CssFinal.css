@@ -1,0 +1,454 @@
+/*Zampe.css*/
+/*CSS Barra in alto*/
+.Mheaderbar{
+  background-color: #e6a800;
+  text-align: center;
+  vertical-align: middle;
+  height: 28px;
+}
+#Mheaderbartext{
+  text-align: center;
+  vertical-align: middle;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px;
+  color: rgba(85, 85, 85, 0.89);
+  text-decoration: none;
+  padding-top: 5px;
+}
+
+/*CSS Barra di navigazione*/
+.Mnavbar {
+  background:  rgb(0, 90, 84); /*rgb(45, 150, 125)*/
+  height:  75px;
+}
+.tastonav{
+  text-align: center;
+  padding: 3%;
+  margin-left: 10%;
+}
+
+.logo {
+  position: relative;
+  width: 4.5em;
+  height: 0;
+}
+.logo .wrapper {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  border-radius: 100%;
+}
+.logo img {
+  width: 100%;
+  padding: 0.5em;
+}
+a {
+  color: #720094;
+  text-decoration: none;
+  background-color: transparent;
+}
+.nav-link{ 
+  color: #b9b9b9;
+  font-weight: 500;
+}
+
+.mNav-link{ 
+      padding: 1rem 5rem!important;
+}
+
+.bg-darkm{
+  background-color: #006853!important;
+}
+
+.nav{ 
+  --bs-nav-link-hover-color: #eb9700;  
+}
+
+
+/*ScreenSize uguale o meno di 200px*/
+@media screen and (max-width: 200px){ 
+
+  p{ 
+      font-size: 5px !important;
+  } 
+
+  h3{ font-size: 10px !important;}
+}
+
+@media screen and (min-width: 200px) and (max-width: 265px) { 
+
+  p{ 
+      font-size: 6px !important;
+  }
+  h3{ font-size: 12px !important;}
+}
+
+@media screen and (min-width: 265px) and (max-width: 305px) { 
+
+  p{ 
+      font-size: 7px !important;
+  }
+
+  
+  h3{ font-size: 14px !important;}
+}
+
+@media screen and (min-width: 305px) and (max-width: 450px) { 
+
+  p{ 
+      font-size: 7px !important;
+  }
+  
+  h3{ font-size: 14px !important;}
+}
+
+@media screen and (min-width: 450px) and (max-width: 600px) { 
+
+  p{ 
+      font-size: 9px !important;
+  }
+  
+  h3{ font-size: 15px !important;}
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) { 
+
+  p{ 
+      font-size: 10px !important;
+  }
+  
+  h3{ font-size: 17px !important;}
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) { 
+
+  p{ 
+      font-size: 11px !important;
+  }
+  
+  h3{ font-size: 20px !important;}
+}
+
+@media screen and (min-width: 1000px){ 
+
+  p{ 
+      font-size: 14px !important;
+      
+  }
+  
+  h3{ font-size: 20px !important;}
+
+  .nav-item{ 
+      font-size: 20px;
+  }
+}
+/*home css*/
+.home {
+  color: #04AA6D;
+}
+
+.iter {
+  color: #737170;
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+
+.titoloiter {
+  color: #4E4D4C;
+  text-align: center;
+}
+.tondi{
+  padding-top: 10%;
+}
+
+.rece{
+  text-align: center;
+  color:#737170;
+
+}
+h3{
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  color:#4E4D4C;
+}
+
+/* pagina chi siamo*/
+.TestoChi {
+  background-color:#519b8a70;
+  padding: 5%;  
+}
+
+.container{
+  margin-top: 3%;
+  margin-left: 3%;
+}
+
+/*pagina donazioni*/
+
+.testoDonaz {
+  background-color: #519b8a70;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.mappa {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 50%;
+  width: 90%;
+}
+.orario {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 50%;    
+}
+.list-group-item.active {
+  background-color: #519B8A;
+}
+.list-group-item {
+  background-color: #FBB74D;
+}
+
+
+/* CARD ADOZIONI */
+.profile-card-4 {
+  max-width: 300px;
+  background-color: #FFF;
+  border-radius: 5px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.profile-card-4 img {
+  transition: all 0.25s linear;
+}
+
+.profile-card-4 .profile-content {
+  position: relative;
+  padding: 15px;
+  background-color: #FFF;
+}
+
+.profile-card-4 .profile-name {
+  font-weight: bold;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: -70px;
+  color: #FFF;
+  font-size: 17px;
+}
+
+.profile-card-4 .profile-name p {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+}
+
+.profile-card-4 .profile-description {
+  color: #777;
+  font-size: 12px;
+  padding: 10px;
+}
+
+.profile-card-4 .profile-overview {
+  padding: 15px 0px;
+}
+
+.profile-card-4 .profile-overview p {
+  font-size: 10px;
+  font-weight: 600;
+  color: #777;
+}
+
+.profile-card-4 .profile-overview h4 {
+  color: #273751;
+  font-weight: bold;
+}
+
+.profile-card-4 .profile-content::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  top: -10px;
+  left: 0px;
+  right: 0px;
+  background-color: #FFF;
+  z-index: 0;
+  transform: skewY(3deg);
+}
+
+.profile-card-4:hover img {
+  transform: rotate(5deg) scale(1.1, 1.1);
+  filter: brightness(110%);
+}
+
+/*fine card*/
+
+html,body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#footer {
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    font-size: 15px;
+    background-color: #519B8A;
+    color:white;
+  }
+
+  .footer_center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto; 
+  }
+
+  .footer_align{
+    text-align: left;
+  }
+  
+  ul {    /*gestione lista*/
+    list-style-type: none;
+    margin:0;
+    padding:0;
+  }
+
+  a {            /*gestione link*/
+    text-decoration: none;
+    text-decoration: white;
+  }
+  a:visited {
+    color:#d1d8d8;
+  }
+  a:active {
+    color:white;
+  }
+    
+  a:hover {
+    color:aquamarine;
+  }
+ 
+
+#padcontent {    /*padding superiore footer*/
+    padding-top: 50px;
+}
+
+
+
+/*adozione css*/
+.profile-card-4 {
+  max-width: 300px;
+  background-color: #FFF;
+  border-radius: 5px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.profile-card-4 img {
+  transition: all 0.25s linear;
+}
+
+.profile-card-4 .profile-content {
+  position: relative;
+  padding: 15px;
+  background-color: #FFF;
+}
+
+.profile-card-4 .profile-name {
+  font-weight: bold;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: -70px;
+  color: #FFF;
+  font-size: 17px;
+}
+
+.profile-card-4 .profile-name p {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+}
+
+.profile-card-4 .profile-description {
+  color: #777;
+  font-size: 12px;
+  padding: 10px;
+}
+
+.profile-card-4 .profile-overview {
+  padding: 15px 0px;
+}
+
+.profile-card-4 .profile-overview p {
+  font-size: 10px;
+  font-weight: 600;
+  color: #777;
+}
+
+.profile-card-4 .profile-overview h4 {
+  color: #273751;
+  font-weight: bold;
+}
+
+.profile-card-4 .profile-content::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  top: -10px;
+  left: 0px;
+  right: 0px;
+  background-color: #FFF;
+  z-index: 0;
+  transform: skewY(3deg);
+}
+
+.profile-card-4:hover img {
+  transform: rotate(5deg) scale(1.1, 1.1);
+  filter: brightness(110%);
+}
+h2.titolo{
+  text-align: center;
+  padding-bottom: 5%;
+  color: #4E4D4C;
+}
+
+
+/*riservata css*/
+.btn-primary{
+  margin-top: 2%;
+  background-color: #04AA6D;
+  border-color: #04AA6D;
+}
+.form_amministrativo{
+ 
+  margin-left: 5%;
+ 
+}
+.titolo_form{
+  text-align: center;
+  padding-bottom: 5%;
+}
+.form-check-input:checked {
+background-color: #04AA6D;
+border-color: #04AA6D;
+}
+
+
+

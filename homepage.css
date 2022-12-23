@@ -1,8 +1,10 @@
 /* pagina chi siamo*/
-.TestoChi {
-    background-color: #519b8a70;
-    padding: 5%;
-    border-radius: 2%;
+.testochi {
+    background-color: #519B8A;
+    color: white;
+    padding: 1.5%;
+    border-radius: 3%;
+    border-width: 20%;
 }
 
 .container {
@@ -10,7 +12,9 @@
     margin-left: 1%;
     margin-right:1%;
 }
-
+.fotochi{
+    padding-right: 1%;
+}
 /*pagina donazioni*/
 
 .testoDonaz {
@@ -61,17 +65,19 @@
 .orario {
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-right: 50%;
+    padding-right: 10%;
+    padding-right: 10%;   
+}
+/*colore orario*/
+.list-group-item {
+    background-color: #FBB74D;
 }
 
 .list-group-item.active {
     background-color: #519B8A;
 }
 
-/*colore orario*/
-.list-group-item {
-    background-color: #fbd24d11;
-}
+
 
 
 /* CARD ADOZIONI */
