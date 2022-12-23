@@ -70,14 +70,13 @@
 }
 /*colore orario*/
 .list-group-item {
-    background-color: #FBB74D;
+    background-color: #ffffff;
+    border-color:black ;
 }
 
 .list-group-item.active {
     background-color: #519B8A;
 }
-
-
 
 
 /* CARD ADOZIONI */
