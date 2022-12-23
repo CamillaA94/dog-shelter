@@ -33,9 +33,9 @@ public class LoginController {
             HttpSession session, 
             Model model) {
         if(session.getAttribute("logged") != null)
-            return "redirect:/riservata";
+            return "redirect:/tabella";
         if(!adminService.login(username, password, session))
             return "redirect:/login?er";
-        return "redirect:/riservata";
+        return "redirect:/tabella";
     }
 }
