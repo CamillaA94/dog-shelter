@@ -36,12 +36,18 @@
       }
 
       .form-check-input:checked {
-    background-color: #04AA6D;
-    border-color: #04AA6D;
+    background-color: #519B8A;
+    border-color: #519B8A;
       }
       img{
         max-width:260px;
       }
+
+      h6 {
+        margin-top: 4%;
+        padding-top: 3%;
+      }
+
       
     </style>
 
@@ -69,29 +75,32 @@
   <div class="row">
       <div class="col-lg-1 col-md-1 col-sm-1 col-12"></div>
       <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+        <!--scegli cane seleziona-->
+          <!--Campo 1-->
+          <div>
+            <label for="validationCustom04" class="form-label"><h6>Scegli cane:</h6></label>
+            <select class="form-select" id="validationCustom04" required>
+              <option selected disabled value=""></option>
+              <option>...</option>
+            </select>
+            <input class="btn btn-primary" type="submit" value="Seleziona" style="margin-bottom:4%;"></input>
+          </div>
+
           <!--form inserimento dati-->
           <form class="form_amministrativo">
-            <!--Campo 1-->
-            <div>
-              <label for="validationCustom04" class="form-label">Scegli cane:</label>
-              <select class="form-select" id="validationCustom04" required>
-                <option selected disabled value=""></option>
-                <option>...</option>
-              </select>
-            </div>
             <!--Campo 2-->
             <div>
-              <label for="validationCustom01" class="form-label">Nome:</label>
+              <label for="validationCustom01" class="form-label"><h6>Nome:</h6></label>
               <input type="text" class="form-control" id="validationCustom01" value="" required>
             </div>
             <!--Campo 3-->
             <div>
-              <label for="validationCustom02" class="form-label">Razza:</label>
+              <label for="validationCustom02" class="form-label"><h6>Razza:</h6></label>
               <input type="text" class="form-control" id="validationCustom02" value="" required>
             </div>
             <!--Campo 4-->
             <div>
-              <label for="validationCustom04" class="form-label">Età:</label>
+              <label for="validationCustom04" class="form-label"><h6>Età:</h6></label>
               <select class="form-select" id="validationCustom04" required>
                 <option selected disabled value=""></option>
                 <option>1</option>
@@ -102,7 +111,7 @@
             </div>
             <!--Campo 5-->
             <div>
-              <label for="validationCustom04" class="form-label">Sesso:</label>
+              <label for="validationCustom04" class="form-label"><h6>Sesso:</h6></label>
               <select class="form-select" id="validationCustom04" required>
                 <option selected disabled value=""></option>
                 <option>M</option>
@@ -110,7 +119,7 @@
               </select>
             </div>
             <!--Campo 6-->
-            <p>Vaccinazioni:</p>
+            <h6>Vaccinazioni:</h6>
             <div class="form-check form-check">
               <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
               <label class="form-check-label" for="inlineCheckbox1">Parvovirus canino</label>
@@ -154,7 +163,7 @@
       <!-- inizio seconda colonna form -->
       <div class="col-lg-4 col-md-4 col-sm-4 col-12">
           <!-- Campo 7 -->
-          <p>Sterilizzazione:</p>
+          <h6>Sterilizzazione:</h6>
           <div class="form-check-inline">
             <input class="form-check-input" type="radio" name="sterilizzazione" id="flexRadioDefault1">
             <label class="form-check-label" for="flexRadioDefault1">
@@ -168,7 +177,7 @@
             </label>
           </div>
           <!--Campo 8-->
-          <p>Microchip:</p>
+          <h6>Microchip:</h6>
             <div class="form-check-inline">
               <input class="form-check-input" type="radio" name="microchip" id="flexRadioDefault3">
               <label class="form-check-label" for="flexRadioDefault3">
@@ -184,12 +193,12 @@
           
           <!--Campo 9-->
           <div>
-            <label for="validationCustom05" class="form-label">Descrizione</label>
+            <label for="validationCustom05" class="form-label"><h6>Descrizione:</h6></label>
             <input type="text" class="form-control" id="validationCustom05" required>
           </div>
 
           <!--Campo 10-->
-          <p>Data di arrivo:</p>
+          <h6>Data di arrivo:</h6>
             <div>
               <input type="date" id="start" name="trip-start"
                 value="2018-07-22"
@@ -197,7 +206,7 @@
             </div>
             
           <!--Campo 11 scelta foto-->
-          <p>Scegli foto:</p>
+        <h6>Scegli foto:</h6>
           <div>
             <div class="input-group mb-3">
               <input type="file" class="form-control" id="inputGroupFile01"> 
@@ -226,8 +235,8 @@
 
           <!--Bottone Salva / Elimina-->
           <div>
-            <button class="btn btn-primary" type="submit">Salva</button>
-            <button class="btn btn-primary" type="submit">Elimina</button>
+            <button class="btn btn-primary" type="submit" style="margin-top:10%;">Salva</button>
+            <button class="btn btn-primary" type="submit" style="margin-top:10%;">Elimina</button>
           </div>
 
         </div>
