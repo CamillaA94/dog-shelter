@@ -185,7 +185,7 @@
     <div>
       <img th:if="${cane.immagine}" th:src="@{'static/cani/' + ${cane.id} + '.png'}">
     <br>
-    <div class="input-group mb-3">
+    <div class="input-group mb-3" id="img2" th:style="${cane.immagine ? 'display:block' : 'display:none'}">
     <label class="form-label" th:text="#{label.immagine2} + ':'"></label><br />
       <input type="file" class="form-control" id="inputGroupFile02" name="immagine2">
     </div>
@@ -194,7 +194,7 @@
       <a class= "btn btn-danger" th:if="${cane.immagine2}" th:href="@{riservata/eliminaimmagine2(id=${cane.id})}" th:text="#{button.eliminaimmagine}"></a>
     </div>
 	<br>
-    <div class="input-group mb-3">
+    <div class="input-group mb-3" id="img3" th:style="${cane.immagine2 ? 'display:block' : 'display:none'}">
     <label class="form-label" th:text="#{label.immagine3} + ':'"></label><br />
     <input type="file" class="form-control" id="inputGroupFile03" name="immagine3">     
     </div>
@@ -217,7 +217,21 @@
 </div>
 </div>
 </div>
+	<script>
+    document.getElementById("inputGroupFile01").addEventListener("change", immagine2);
+    function immagine2() {
+      if(document.getElementById("img2").style.display != 'block') {
+        document.getElementById("img2").style.display= 'block';
+      }
+    }
 
+    document.getElementById("inputGroupFile02").addEventListener("change", immagine3);
+    function immagine3() {
+      if(document.getElementById("img3").style.display != 'block') {
+        document.getElementById("img3").style.display= 'block';
+      }
+    }
+	</script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>

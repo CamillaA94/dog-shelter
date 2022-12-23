@@ -23,23 +23,8 @@ public class TabellaController {
 	public String getPage(Model model, HttpSession session, @RequestParam(name = "ordine", required = false) String ordine) {
 		if(session.getAttribute("logged") == null)
 			return "redirect:/login";
-		List<Cane> cani = new ArrayList<Cane>();
-    	if(ordine.equals("alfabetico")) {
-    		cani = caneService.getCaniAlfabetico();
-    	} else if(ordine.equals("primi")) {
-    		cani = caneService.getCaniPrimi();
-    	} else if(ordine.equals("crescente")) {
-    		cani = caneService.getCaniEtaCrescente();
-    	} else if(ordine.equals("decrescente")) {
-    		cani = caneService.getCaniEtaDecrescente();
-    	} else if(ordine.equals("maschi")) {
-    		cani = caneService.getCaniMaschi();
-    	} else if(ordine.equals("femmine")) {
-    		cani = caneService.getCaniFemmine();
-    	} else {
-    		cani = caneService.getCaniUltimi();
-    	}
-		model.addAttribute("titolo", "Area riservata");
+		List<Cane> cani = caneService.getCaniAlfabetico();
+    	model.addAttribute("titolo", "Area riservata");
 		model.addAttribute("cani", cani);
 		return "tabella";
 	}
