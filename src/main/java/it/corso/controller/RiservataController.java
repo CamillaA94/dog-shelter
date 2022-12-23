@@ -21,8 +21,13 @@ public class RiservataController {
 	private CaneService caneService;
 	
 	@GetMapping
-	public String getPage(Model model, HttpSession session, @RequestParam(name = "id", required = false) Integer id)
+	public String getPage(
+			Model model, 
+			HttpSession session, 
+			@RequestParam(name = "id", required = false) Integer id,
+			@RequestParam(name = "er", required = false) String er)
 	{
+		boolean errore = er != null;
 		if(session.getAttribute("logged") == null)
 			return "redirect:/login";
 		Cane cane = id != null && id != 0 ? caneService.getCaneById(id) : new Cane();
@@ -43,6 +48,7 @@ public class RiservataController {
 		model.addAttribute("titolo", "Area modifiche");
 		model.addAttribute("cane", cane);
 		model.addAttribute("cani", caneService.getCaniAlfabetico());
+		model.addAttribute("errore", errore);
 		return "riservata";
 	}
 	
@@ -58,17 +64,22 @@ public class RiservataController {
 			@RequestParam("razza") String razza,
 			@RequestParam("eta") String eta,
 			@RequestParam("sesso") String sesso,
-			@RequestParam("sterilizzazione") boolean sterilizzazione,
-			@RequestParam("vaccinazioni") String[] vax,
-			@RequestParam("microchip") boolean microchip,
-			@RequestParam("descrizione") String descrizione,
+			@RequestParam(name = "sterilizzazione", required = false) boolean sterilizzazione,
+			@RequestParam(name = "vaccinazioni", required = false) String[] vax,
+			@RequestParam(name = "microchip", required = false) boolean microchip,
+			@RequestParam(name = "descrizione", required = false) String descrizione,
 			@RequestParam("arrivo") String data,
 			@RequestParam(name = "immagine", required = false) MultipartFile immagine,
 			@RequestParam(name = "immagine2", required = false) MultipartFile immagine2,
 			@RequestParam(name = "immagine3", required = false) MultipartFile immagine3,
 			HttpSession session)
 	{
-		if(!caneService.checkCane(nome, razza, descrizione))
+		if(!caneService.checkCane(nome, razza, descrizione) || vax == null)
+			return "redirect:/riservata?er";
+		String rootDir = session.getServletContext().getRealPath("/");
+		String filePath = rootDir + "static\\cani\\" + id + ".png";
+		File file = new File(filePath);
+		if(!file.exists() && (immagine.isEmpty() || immagine == null))
 			return "redirect:/riservata?er";
 		Cane cane = id != 0 ? caneService.getCaneById(id) : new Cane();
 		caneService.registraCane(cane, id, nome, razza, eta, sesso, sterilizzazione, vax, microchip, descrizione, data);

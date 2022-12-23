@@ -29,13 +29,17 @@
       img{
         max-width:260px;
       }
+      #obbligatori{
+      font-weight: bold;
+      }
     </style>
 
   </head>
 <body>
   	<div class="titolo_form">
  	 <h3>Benvenuto nell'area di modifica</h3><br />
- 	 <h4>Seleziona "Nuovo cane" per un nuovo inserimento, oppure il nome del cane per le modifiche</h4>
+ 	 <h4>Seleziona "Nuovo cane" per un nuovo inserimento, oppure il nome del cane per le modifiche</h4><br /><br />
+ 	 <span th:if="${errore}" th:text="#{errore.salvataggio}" class="alert alert-danger" id="errore"></span>
 	</div>
 <div class="container">
   <div class="row">
@@ -60,17 +64,17 @@
 	<input type="hidden" id="id" name="id" th:value="${cane.id}">
     <!--Campo 2-->
     <div class="col-md-6">
-      <label for="validationCustom01" class="form-label" th:text="#{label.nome} + ': '"></label>
+      <label for="validationCustom01" class="form-label" th:text="#{label.nome} + '*: '"></label>
       <input type="text" class="form-control" id="validationCustom01" name="nome" th:value="${cane.nome}" required>
     </div><br />
     <!--Campo 3-->
     <div class="col-md-6">
-      <label for="validationCustom02" class="form-label" th:text="#{label.razza} + ': '"></label>
+      <label for="validationCustom02" class="form-label" th:text="#{label.razza} + '*: '"></label>
       <input type="text" class="form-control" id="validationCustom02" name="razza" th:value="${cane.razza}" required>
     </div><br />
     <!--Campo 4-->
     <div class="col-md-6">
-      <label for="validationCustom04" class="form-label" th:text="#{label.eta} + ': '"></label>
+      <label for="validationCustom04" class="form-label" th:text="#{label.eta} + '*: '"></label>
       <select class="form-select" id="validationCustom04" name="eta" required>
         <option selected disabled value="" th:text="#{label.seleziona}"></option>
         <option th:value="1" th:text="1" th:selected="${cane.eta == 1}"></option>
@@ -97,7 +101,7 @@
     </div><br />
     <!--Campo 5-->
     <div class="col-md-6">
-      <label for="validationCustom04" class="form-label" th:text="#{label.sesso} + ': '"></label>
+      <label for="validationCustom04" class="form-label" th:text="#{label.sesso} + '*: '"></label>
       <select class="form-select" id="validationCustom04" name="sesso" required>
         <option selected disabled value="" th:text="#{label.seleziona}"></option>
         <option th:value="M" th:text="M" th:selected="${cane.sesso.equals('M')}"></option>
@@ -105,7 +109,7 @@
       </select>
     </div><br />
     <!-- Campo 6 tipi di vaccinazioni-->
-    <div th:text="#{label.vaccinazioni} + ': '"></div>
+    <div th:text="#{label.vaccinazioni} + '*: '"></div>
     <div class="form-check form-check">
       <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="vaccinazioni" th:value="#{vaccinazioni.parvovirus}" th:checked="${cane.vaccinazioni.contains('Parvovirus')}">
       <label class="form-check-label" for="inlineCheckbox1" th:text="#{vaccinazioni.parvovirus}"></label>
@@ -165,17 +169,17 @@
     <!--Campo 9-->
     <div class="col-md-6">
       <label for="validationCustom05" class="form-label" th:text="#{label.descrizione} + ': '"></label>
-      <input type="text" class="form-control" id="validationCustom05" name="descrizione" th:value="${cane.descrizione}" required>
+      <input type="text" class="form-control" id="validationCustom05" name="descrizione" th:value="${cane.descrizione}">
     </div><br />
     <!--Campo 10-->
-    <div th:text="#{label.data} + ': '"></div>
+    <div th:text="#{label.data} + '*: '"></div>
 	<div>
       <input type="date" id="start" name="arrivo" th:value="${cane.arrivo}" required min="2018-01-01" max="2030-01-01" style="width:300px ; padding-left: 2px; color: grey;">
     </div><br />
     <!--Campo 11 scelta foto-->
 <div class="col-md-6">
     <div class="input-group mb-3">
-    <label class="form-label" th:text="#{label.immagine} + ':'"></label><br />
+    <label class="form-label" th:text="#{label.immagine} + '*:'"></label><br />
       <input type="file" class="form-control" id="inputGroupFile01" name="immagine"> 
     </div>
     <div>
@@ -198,7 +202,8 @@
       <img th:if="${cane.immagine3}" th:src="@{'static/cani/' + ${cane.id} + 'c.png'}">
       <a class= "btn btn-danger" th:if="${cane.immagine3}" th:href="@{riservata/eliminaimmagine3(id=${cane.id})}" th:text="#{button.eliminaimmagine}"></a>
     </div>
-  </div>
+  </div><br />
+  <div th:text="#{label.obbligatori}" id="obbligatori"></div><br />
     <!--Bottone Salva-->
     <div class="col-12">
       <input class="btn btn-primary" type="submit" th:value="#{button.salva}" />
