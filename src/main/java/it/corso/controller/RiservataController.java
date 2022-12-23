@@ -40,7 +40,7 @@ public class RiservataController {
 		String filePath3 = rootDir + "static\\cani\\" + id + "c.png";
 		File file3 = new File(filePath3);
 		cane.setImmagine3(file3.exists());
-		model.addAttribute("titolo", "Area riservata");
+		model.addAttribute("titolo", "Area modifiche");
 		model.addAttribute("cane", cane);
 		model.addAttribute("cani", caneService.getCaniAlfabetico());
 		return "riservata";
@@ -78,7 +78,7 @@ public class RiservataController {
 			salvaImmagine2(cane.getId(), immagine2, session);
 		if(immagine3 != null && !immagine3.isEmpty())
 			salvaImmagine3(cane.getId(), immagine3, session);
-		return "redirect:/riservata";
+		return "redirect:/tabella";
 	}
 	
 	@GetMapping("/elimina")
@@ -88,7 +88,15 @@ public class RiservataController {
 		String filePath = rootDir + "static\\cani\\" + id + ".png";
 		File file = new File(filePath);
 		file.delete();
-		return "redirect:/riservata";
+		String filePath2 = rootDir + "static\\cani\\" + id + "b.png";
+		File file2 = new File(filePath2);
+		if(file2.exists())
+			file2.delete();
+		String filePath3 = rootDir + "static\\cani\\" + id + "c.png";
+		File file3 = new File(filePath3);
+		if(file3.exists())
+			file3.delete();
+		return "redirect:/tabella";
 	}
 	
 	@GetMapping("/eliminaimmagine2")

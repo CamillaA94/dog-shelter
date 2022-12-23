@@ -12,5 +12,9 @@ public interface CaneService {
 	public List<Cane> getCaniAlfabetico();
 	public List<Cane> getCaniPrimi();
 	public List<Cane> getCaniUltimi();
+	public List<Cane> getCaniEtaCrescente();
+	public List<Cane> getCaniEtaDecrescente();
+	public List<Cane> getCaniMaschi();
+	public List<Cane> getCaniFemmine();
 	public void cancellaCane(Cane cane);
 }
