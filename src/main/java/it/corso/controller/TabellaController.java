@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import it.corso.model.Cane;
@@ -20,12 +21,34 @@ public class TabellaController {
 	private CaneService caneService;
 	
 	@GetMapping
-	public String getPage(Model model, HttpSession session, @RequestParam(name = "ordine", required = false) String ordine) {
+	public String getPage(Model model, HttpSession session, @RequestParam(name = "ord", required = false) String ord) {
 		if(session.getAttribute("logged") == null)
 			return "redirect:/login";
-		List<Cane> cani = caneService.getCaniAlfabetico();
+		List<Cane> cani = new ArrayList<Cane>();
+		if(ord == null || ord.equals("alfabetico")) {
+			cani = caneService.getCaniAlfabetico();
+		} else if(ord.equals("ultimi")) {
+			cani = caneService.getCaniUltimi();
+		} else if(ord.equals("primi")) {
+			cani = caneService.getCaniPrimi();
+		} else if(ord.equals("crescente")) {
+			cani = caneService.getCaniEtaCrescente();
+		} else if(ord.equals("decrescente")) {
+			cani = caneService.getCaniEtaDecrescente();
+		} else if(ord.equals("femmine")) {
+			cani = caneService.getCaniFemmine();
+		} else if(ord.equals("maschi")) {
+			cani = caneService.getCaniMaschi();
+		}
+		String ordine;
+		if (ord == null) {
+			ordine = "alfabetico";
+		} else {
+			ordine = ord;
+		}
     	model.addAttribute("titolo", "Area riservata");
 		model.addAttribute("cani", cani);
+		model.addAttribute("ordine", ordine);
 		return "tabella";
 	}
 	
@@ -45,5 +68,10 @@ public class TabellaController {
 		if(file3.exists())
 			file3.delete();
 		return "redirect:/tabella";
+	}
+	
+	@PostMapping("/ordina")
+	public String ordinaCani(@RequestParam("ordine") String ordine) {
+		return "redirect:/tabella?ord=" + ordine;
 	}
 }

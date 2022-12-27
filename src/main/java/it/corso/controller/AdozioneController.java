@@ -18,25 +18,32 @@ public class AdozioneController {
  private CaneService caneService;
     
     @GetMapping
-    public String getPage(Model model, @RequestParam(name = "ordine", required = false) String ordine) {
+    public String getPage(Model model, @RequestParam(name = "ord", required = false) String ord) {
     	List<Cane> cani = new ArrayList<Cane>();
-    	if(ordine.equals("alfabetico")) {
-    		cani = caneService.getCaniAlfabetico();
-    	} else if(ordine.equals("primi")) {
-    		cani = caneService.getCaniPrimi();
-    	} else if(ordine.equals("crescente")) {
-    		cani = caneService.getCaniEtaCrescente();
-    	} else if(ordine.equals("decrescente")) {
-    		cani = caneService.getCaniEtaDecrescente();
-    	} else if(ordine.equals("maschi")) {
-    		cani = caneService.getCaniMaschi();
-    	} else if(ordine.equals("femmine")) {
-    		cani = caneService.getCaniFemmine();
-    	} else {
-    		cani = caneService.getCaniUltimi();
-    	}
+    	if(ord == null || ord.equals("alfabetico")) {
+			cani = caneService.getCaniAlfabetico();
+		} else if(ord.equals("ultimi")) {
+			cani = caneService.getCaniUltimi();
+		} else if(ord.equals("primi")) {
+			cani = caneService.getCaniPrimi();
+		} else if(ord.equals("crescente")) {
+			cani = caneService.getCaniEtaCrescente();
+		} else if(ord.equals("decrescente")) {
+			cani = caneService.getCaniEtaDecrescente();
+		} else if(ord.equals("femmine")) {
+			cani = caneService.getCaniFemmine();
+		} else if(ord.equals("maschi")) {
+			cani = caneService.getCaniMaschi();
+		}
+    	String ordine;
+		if (ord == null) {
+			ordine = "alfabetico";
+		} else {
+			ordine = ord;
+		}
     	model.addAttribute("titolo", "Adozione");
         model.addAttribute("cani", cani);
+        model.addAttribute("ordine", ordine);
         return "adozione";
     }
 }

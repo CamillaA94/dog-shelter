@@ -18,12 +18,36 @@
         	text-align: center;
         	padding-bottom: 5%;
       	}
+      	
 	</style>
 		<body>
 			<div class="titolo_tabella">
  			<h3>Benvenuto nell'area riservata</h3><br />
- 			<a th:href="@{/riservata}" class="btn btn-primary btn-sm small-button align-right" th:text="#{button.nuovo}"></a>
+ 			<a th:href="@{/riservata}" class="btn btn-primary align-right" th:text="#{button.nuovo}"></a>
 			</div>
+			
+			<div class="row">
+            	<div class="col-9"></div>
+                <form action="tabella/ordina" method="POST">
+                <div class="col-3">
+                	<select class="form-select" name="ordine">
+                		<option selected disabled value="" th:text="#{label.ordine}"></option>
+                   		<option value="alfabetico" th:text="#{label.alfabetico}" th:selected="${ordine.equals('alfabetico')}"></option>
+                   		<option value="ultimi" th:text="#{label.ultimi}" th:selected="${ordine.equals('ultimi')}"></option>
+                   		<option value="primi" th:text="#{label.primi}" th:selected="${ordine.equals('primi')}"></option>
+                   		<option value="crescente" th:text="#{label.crescente}" th:selected="${ordine.equals('crescente')}"></option>
+                   		<option value="decrescente" th:text="#{label.decrescente}" th:selected="${ordine.equals('decrescente')}"></option>
+                   		<option value="femmine" th:text="#{label.femmine}" th:selected="${ordine.equals('femmine')}"></option>
+                   		<option value="maschi" th:text="#{label.maschi}" th:selected="${ordine.equals('maschi')}"></option>
+                   	</select><br />                 
+            	</div>
+            	<div class="col-10"></div>
+            	<div class="col-2">
+            		<input type="submit" th:value="#{button.seleziona}" class="btn btn-primary">
+            	</div>
+            	</form>
+            </div>
+                        
 			<div class="row justify-content-center mt-4">
 					<div class="col-1"></div>
 					<div class="col-10">

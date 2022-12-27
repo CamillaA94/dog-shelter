@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Dic 19, 2022 alle 17:42
+-- Creato il: Dic 27, 2022 alle 12:25
 -- Versione del server: 10.4.25-MariaDB
 -- Versione PHP: 8.1.10
 
@@ -33,6 +33,13 @@ CREATE TABLE `admin` (
   `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dump dei dati per la tabella `admin`
+--
+
+INSERT INTO `admin` (`id`, `username`, `password`) VALUES
+(1, 'gianluca', '123');
+
 -- --------------------------------------------------------
 
 --
@@ -47,9 +54,19 @@ CREATE TABLE `cani` (
   `sesso` varchar(1) NOT NULL,
   `sterilizzazione` tinyint(1) NOT NULL,
   `vaccinazioni` varchar(255) NOT NULL,
-  `mircrochip` tinyint(1) NOT NULL,
-  `descrizione` varchar(255) NOT NULL
+  `microchip` tinyint(1) NOT NULL,
+  `descrizione` text NOT NULL,
+  `arrivo` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dump dei dati per la tabella `cani`
+--
+
+INSERT INTO `cani` (`id`, `nome`, `razza`, `eta`, `sesso`, `sterilizzazione`, `vaccinazioni`, `microchip`, `descrizione`, `arrivo`) VALUES
+(1, 'Nero', 'Alano', 6, 'M', 1, 'Parvovirus canino, Cimurro canino, Rabbia, Bordetella', 0, 'Dolce', '2022-12-15'),
+(2, 'Fido', 'Pincher', 2, 'F', 1, 'Parvovirus canino, Cimurro canino, Epatite, Leptospirosi, Rabbia', 1, 'Piccolo', '2022-12-13'),
+(3, 'Hachiko', 'Akita', 10, 'M', 1, 'Parvovirus canino, Cimurro canino, Epatite, Leptospirosi, Rabbia', 1, 'Affettuoso', '2022-12-01');
 
 --
 -- Indici per le tabelle scaricate
@@ -66,7 +83,7 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `cani`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `microchip` (`mircrochip`),
+  ADD KEY `microchip` (`microchip`),
   ADD KEY `sesso` (`sesso`),
   ADD KEY `steriliz` (`sterilizzazione`),
   ADD KEY `vaccino` (`vaccinazioni`);
@@ -79,13 +96,13 @@ ALTER TABLE `cani`
 -- AUTO_INCREMENT per la tabella `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT per la tabella `cani`
 --
 ALTER TABLE `cani`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -2,6 +2,7 @@ package it.corso.service;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
@@ -55,8 +56,8 @@ public class CaneServiceImpl implements CaneService {
 	@Override
 	public List<Cane> getCaniAlfabetico() {
 		List<Cane> cani = (List<Cane>)caneDao.findAll();
-		Comparator<Cane> ordineArrivo = Comparator.comparing(Cane::getNome);
-		cani = cani.stream().sorted(ordineArrivo).collect(Collectors.toList());
+		Comparator<Cane> ordineAlfabetico = Comparator.comparing(Cane::getNome);
+		cani = cani.stream().sorted(ordineAlfabetico).collect(Collectors.toList());
 		return cani;
 	}
 	
@@ -95,25 +96,27 @@ public class CaneServiceImpl implements CaneService {
 	@Override
 	public List<Cane> getCaniMaschi() {
 		List<Cane> cani = (List<Cane>)caneDao.findAll();
-		Comparator<Cane> ordineArrivo = Comparator.comparing(Cane::getNome);
-		cani = cani.stream().sorted(ordineArrivo).collect(Collectors.toList());
+		List<Cane> caniMaschi = new ArrayList<Cane>();
 		for(Cane cane : cani) {
-			if(cane.getSesso().equals("F"))
-				cani.remove(cane.getId());
+			if(cane.getSesso().equals("M"))
+				caniMaschi.add(cane);
 		}
-		return cani;
+		Comparator<Cane> ordineAlfabetico = Comparator.comparing(Cane::getNome);
+		caniMaschi = caniMaschi.stream().sorted(ordineAlfabetico).collect(Collectors.toList());
+		return caniMaschi;
 	}
 
 	@Override
 	public List<Cane> getCaniFemmine() {
 		List<Cane> cani = (List<Cane>)caneDao.findAll();
-		Comparator<Cane> ordineArrivo = Comparator.comparing(Cane::getNome);
-		cani = cani.stream().sorted(ordineArrivo).collect(Collectors.toList());
+		List<Cane> caniFemmine = new ArrayList<Cane>();
 		for(Cane cane : cani) {
-			if(cane.getSesso().equals("M"))
-				cani.remove(cane.getId());
+			if(cane.getSesso().equals("F"))
+				caniFemmine.add(cane);
 		}
-		return cani;
+		Comparator<Cane> ordineAlfabetico = Comparator.comparing(Cane::getNome);
+		caniFemmine = caniFemmine.stream().sorted(ordineAlfabetico).collect(Collectors.toList());
+		return caniFemmine;
 	}
 	
 	@Override
