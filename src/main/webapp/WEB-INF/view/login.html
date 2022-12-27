@@ -11,52 +11,91 @@
 
        <style>
       
-        p {
+      	.btn-primary{
+        margin-top: 2%;
+        background-color: #519B8A;
+        border-color: #519B8A;
+      }
+      .btn-primary:hover {
+        background-color: #03cc9d;
+        border-style: #519B8A;
+      }
+      
+      .formstyle {
+        margin-top: 2%;
+        padding-top: 4%;
+        padding-bottom: 3%;
+        border-style: solid;
+        border-color: #519B8A;
+      }
+
+		.titolo_form{
+        text-align: center;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        background-color: #FBB74D;
+      }
+      
+      .high {
+      	font-weight: bold;
+        margin-top: 4%;
+        padding-top: 3%;
+      }
+            
+      p {
           padding-top: 5%;
           font-size: x-large;
-        }
-        .entra{
+      }
+        
+      .entra{
           margin-top: 5%;
-        }
+      }
        
-        h2 {
+      h2 {
           text-align: center;
-        }
-        .log{
+      }
+        
+      .log{
           text-align: center;
-        }
-        .breadcrumb {
-      font-size: 20px;
+      }
+        
+      .breadcrumb {
+      	font-size: 20px;
       
-    }
+      }
+      
     input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-input[type=password], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-.home{
-   color: #04AA6D; 
-}
-.iter{
-    color:#737170;
-   padding-bottom: 5%;
-   padding-top: 5%;
-}
-.titoloiter{
-    color:#4E4D4C;
-text-align: center;
-}
+	  width: 100%;
+	  padding: 12px;
+	  border: 1px solid #ccc;
+	  margin-top: 6px;
+	  margin-bottom: 16px;
+	  resize: vertical;
+	}
+	
+	input[type=password], select, textarea {
+	  width: 100%;
+	  padding: 12px;
+	  border: 1px solid #ccc;
+	  margin-top: 6px;
+	  margin-bottom: 16px;
+	  resize: vertical;
+	}
+	
+	.home{
+	   color: #04AA6D; 
+	}
+	
+	.iter{
+	    color:#737170;
+	   padding-bottom: 5%;
+	   padding-top: 5%;
+	}
+	
+	.titoloiter{
+	    color:#4E4D4C;
+	text-align: center;
+	}
 
 
 
@@ -64,27 +103,40 @@ text-align: center;
      
     </head>
     <body>
-        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="./home.html" th:text="#{pagina.home}"></a></li>
-              <li class="breadcrumb-item active" aria-current="page" th:text="#{pagina.login}"></li>
-            </ol>
-          </nav>
-          
-                 <h2 th:text="#{titolo.login}"></h2>
+                  
+                 <div class="titolo_form">
+				    <div class="row">
+				      <div class="col-lg-2 col-md-2 col-sm-2">
+				          <img th:src="@{static/image/icona_form1.png}" width="80px" height="auto" />
+				      </div>
+				      <div class="col-lg-8 col-md-8 col-sm-8">
+				        <h2>Area login</h2>
+				      </div>
+				      <div class="col-lg-2 col-md-2 col-sm-2">
+				          <img th:src="@{static/image/icona_form2.png}" width="80px" height="auto" />
+				      </div>
+				    </div>
+				  </div><br />
+				  
+				  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+		            <ol class="breadcrumb">
+		              <li class="breadcrumb-item"><a href="./home.html" th:text="#{pagina.home}"></a></li>
+		              <li class="breadcrumb-item active" aria-current="page" th:text="#{pagina.login}"></li>
+		            </ol>
+		          </nav><br />
                  
-                 <div class="container">
+                 <div class="container ">
                   <div class="row">
                       <div class=" col-1 col-md-4"></div>
-                      <div class="col-10 col-md-4 log">
-                 <form action="login" method="POST">
+                      <div class="col-10 col-md-4 log formstyle">
+                 	  <form action="login" method="POST">
+                 	  <label for="username" class="form-label high" th:text="#{label.username}"></label><br />
                       <input type="text" id="username" name="username">
-                      <label for="username" th:text="#{label.username}"></label><br />
                       <br />
+                      <label for="password" class="form-label high" th:text="#{label.password}"></label><br />
                       <input type="password" id="pwd" name="password">
-                      <label for="password" th:text="#{label.password}"></label><br />
                       <br>
-                  	<input type="submit" th:value="#{button.login}" style="background-color:#04AA6D ; color:white; border-color:transparent " class="entra btn btn-lg">
+                  	<input type="submit" th:value="#{button.login}" class="entra btn btn-lg btn-primary">
                   	</form>
                   	<br><br>
                   <span th:if="${errore}" th:text="#{errore.login}" class="alert alert-danger" id="messaggioerrore"></span>
