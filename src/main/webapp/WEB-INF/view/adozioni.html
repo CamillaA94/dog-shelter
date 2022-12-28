@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${titolo}"></title>
+    <link type="text/css" rel="stylesheet" href="../FRONT/bootstrap-5.2.3-dist/css/bootstrap.min.css">
+    <link type="text/js" rel="stylesheet" href="../FRONT/bootstrap-5.2.3-dist/js/bootstrap.min.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+    <script src='main.js'></script>
+    <style>
+    	.btn-primary{
+	        margin-top: 2%;
+	        background-color: #519B8A;
+	        border-color: #519B8A;
+      	}
+      
+      	.btn-primary:hover {
+	        background-color: #03cc9d;
+	        border-style: #519B8A;
+      	}
+    
+        .Dona2 {
+            background-color: #FBB74D;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            margin-top: 0;
+            margin-bottom: 2%;
+            text-align: center;
+            color: black;
+        }
+
+        .profile-card-4 {
+            width: 350px;
+            height: 500px;
+            background-color: #519B8A;
+            border-radius: 5px;
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            margin: 10px auto;
+            cursor: pointer;
+            margin-bottom:30px;
+            text-decoration: none;
+        }
+
+        .profile-card-4 img {
+            transition: all 0.25s linear;
+        }
+
+        .profile-card-4 .profile-content {
+            position: relative;
+            padding: 15px;
+            background-color: #519B8A;
+        }
+
+
+        .profile-card-4 .profile-name p {
+            letter-spacing: 1.5px;
+        }
+
+        .profile-card-4 .profile-description {
+            color: #777;
+            padding: 10px;
+        }
+
+        .profile-card-4 .profile-overview {
+            padding: 15px 0px;
+        }
+
+        .profile-card-4 .profile-overview  {
+            color: #777;
+        }
+
+        .profile-card-4 .profile-overview h4 {
+            color: #273751;
+            font-weight: bold;
+        }
+
+        .profile-card-4 .profile-content::before {
+            content: "";
+            position: absolute;
+            height: 20px;
+            top: -10px;
+            left: 0px;
+            right: 0px;
+            background-color: #519B8A;
+            z-index: 0;
+            transform: skewY(3deg);
+        }
+
+        .profile-card-4:hover img {
+            transform: rotate(5deg) scale(1.1, 1.1);
+            filter: brightness(110%);
+        }
+
+        h2.titolo {
+            text-align: center;
+
+            color: black;
+        }
+
+        .ordina {
+            padding-bottom: 2%;
+        }
+        
+        .breadcrumb {
+      		font-size: 20px;
+      	}
+      	
+      	.nom {
+      		font-weight:bold;
+	      	font-size: 22px;
+	      	margin-bottom: 1%;
+	      	color: black;
+	      	text-decoration: none;
+      	}
+      	
+      	.det {
+      		font-weight:bold;
+	      	font-size: 18px;
+	      	color: black;
+	      	text-decoration: none;
+      	}
+      	
+      	.imag {
+      		width:350px;
+      		height:350px;
+      	}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+
+
+
+        </header>
+        <main>
+            <article>
+                <section>
+                    <!--banner-->
+                    <div class="Dona2">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-2">
+                                <img th:src="@{static/image/icona_adozioni1.png}" width="80px" height="auto" />
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-sm-8">
+                                <h2 class="titolo"> Adotta la tua anima gemella a quattro zampe </h2>
+                                <h5 class="titolo">Qui troverai tutti i nostri cuccioli in cerca di una casa</h5>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-2">
+                                <img th:src="@{static/image/icona_adozioni2.png}" width="80px" height="auto" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="./home.html" th:text="#{pagina.home}"></a></li>
+                            <li class="breadcrumb-item active" aria-current="page" th:text="#{pagina.adozioni}"></li>
+                        </ol>
+                    </nav>
+
+                    <!--ordina per:-->
+
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4"></div>
+                              <div class="col-lg-4 col-md-4 col-sm-4">
+                                  <form action="adozioni/ordina" method="POST"> 
+                                      <select class="form-select" name="ordine">
+                                        <option selected disabled value="" th:text="#{label.ordine}"></option>
+                                           <option value="alfabetico" th:text="#{label.alfabetico}" th:selected="${ordine.equals('alfabetico')}"></option>
+                                           <option value="ultimi" th:text="#{label.ultimi}" th:selected="${ordine.equals('ultimi')}"></option>
+                                           <option value="primi" th:text="#{label.primi}" th:selected="${ordine.equals('primi')}"></option>
+                                           <option value="crescente" th:text="#{label.crescente}" th:selected="${ordine.equals('crescente')}"></option>
+                                           <option value="decrescente" th:text="#{label.decrescente}" th:selected="${ordine.equals('decrescente')}"></option>
+                                           <option value="femmine" th:text="#{label.femmine}" th:selected="${ordine.equals('femmine')}"></option>
+                                           <option value="maschi" th:text="#{label.maschi}" th:selected="${ordine.equals('maschi')}"></option>
+                                       </select>
+                                       <input type="submit" th:value="#{button.seleziona}" class="btn btn-primary"> 
+                                   </form>
+                              </div>
+                          <div class="col-lg-4 col-md-4 col-sm-4"></div>
+                    </div><br /><br />
+
+
+
+
+                    <!--colonne-->
+                    <div class="row">
+                        <!--card-->
+                        <div class="col-12 col-md-4 card-deck" th:each="cane : ${cani}">
+                            <div class="profile-card-4 text-center"><a th:href="@{/schedaCane(id=${cane.id})}" >
+                                <img th:src="@{'static/cani/' + ${cane.id} + '.png'}" class="img img-responsive imag">
+                                <div class="profile-content ">
+                                    <div class="profile-name">
+                                        <p class="nom" th:text="${cane.nome}"></p><br />
+                                        <p class="det" th:text="${cane.sesso.equals('M') ? 'Maschio' : 'Femmina'}"></p>
+                                        <p class="det" th:text="${cane.eta} + ' anni'"></p>
+                                    </div>
+                                </div>
+                            </a></div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </div>
+
+</body>
+
+</html>
