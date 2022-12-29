@@ -76,8 +76,17 @@
     padding-top: 5%;
     text-align: center;
 }
+
+#cane {
+    margin-bottom: 2%;
+}
+
 .pad {
     padding-top: 2%;
+}
+
+.riga {
+    border: 1px solid #519B8A;
 }
 /*chi siamo*/
 .mappa {
