@@ -6,7 +6,8 @@
 
 
 .img{
-    max-width: 800%;
+    width: 50%;
+    margin-left: 25%;
     text-align: center;
     
 }
@@ -40,7 +41,11 @@ button.accordion-button.collapsed{
     padding-top: 2%;
     padding-bottom: 2%;
     margin-top:0;
-    margin-bottom: 5%;
+    margin-bottom: 1%;
     text-align: center;
     color: black;
+}
+.row{
+    margin-left: 0%;
+    margin-right: 0%;
 }
