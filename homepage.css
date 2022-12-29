@@ -60,6 +60,13 @@
     padding-top: 10%;
 }
 
+.bisogni {
+    padding-top: 5%;
+    text-align: center;
+}
+.pad {
+    padding-top: 2%;
+}
 /*chi siamo*/
 .mappa {
     margin-top: 30px;
