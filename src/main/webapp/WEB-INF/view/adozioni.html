@@ -99,7 +99,11 @@
 
         h2.titolo {
             text-align: center;
-
+            color: black;
+        }
+        
+        .tit {
+            text-align: center;
             color: black;
         }
 
@@ -115,14 +119,14 @@
       		font-weight:bold;
       		font-style:italic;
 	      	font-size: 24px;
-	      	color: black;
+	      	color: white;
 	      	text-decoration: none;
       	}
       	
       	.det {
       		font-weight:bold;
 	      	font-size: 18px;
-	      	color: black;
+	      	color: white;
 	      	text-decoration: none;
       	}
       	
@@ -189,14 +193,15 @@
                           <div class="col-lg-4 col-md-4 col-sm-4"></div>
                     </div><br /><br />
 
-
-
+					<div><h5 class="tit">Clicca sull'immagine per aprire la scheda di dettaglio del cane</h5><br /></div>
+					
+					
 
                     <!--colonne-->
                     <div class="row">
                         <!--card-->
                         <div class="col-12 col-md-4 card-deck" th:each="cane : ${cani}">
-                            <div class="profile-card-4 text-center"><a th:href="@{/schedaCane(id=${cane.id})}" >
+                            <div class="profile-card-4 text-center"><a th:href="@{/scheda(id=${cane.id})}" >
                                 <img th:src="@{'static/cani/' + ${cane.id} + '.png'}" class="img img-responsive imag"></a>
                                 <div class="profile-content ">
                                     <div class="profile-name">

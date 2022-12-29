@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda del cane</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src='main.js'></script>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Snippet - GoSNippets</title>
+  <link href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css' rel='stylesheet'>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
+  <style></style>
+  <script type='text/javascript' src=''></script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+  <script type='text/javascript'
+    src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
+
+  <link type="text/css" rel="stylesheet" href="../FRONT/bootstrap-5.2.3-dist/css/bootstrap.min.css">
+  <link type="text/js" rel="stylesheet" href="../FRONT/bootstrap-5.2.3-dist/js/bootstrap.min.js">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+  <script src='main.js'></script>
+  <style>
+    .Dona2 {
+      background-color: #FBB74D;
+      padding-top: 2%;
+      padding-bottom: 2%;
+      margin-top: 0;
+      margin-bottom: 2%;
+      text-align: center;
+      color: black;
+    }
+
+    .riepilogo {
+      background-color: #519B8A;
+      border-radius: 2%;
+      word-wrap: break-word
+    }
+
+    .titolo {
+      text-align: center;
+    }
+
+    .titolo2 {
+      text-align: center;
+    }
+
+    .ourbutton {
+      background-color: #519B8A;
+      color: white;
+    }
+
+    .ourbutton:hover {
+      background-color: #03cc9d;
+      border: #519B8A;
+    }
+
+    .testo {
+      text-align: center;
+    }
+
+    .breadcrumb {
+      font-size: 20px;
+    }
+
+    .profile-card-4 {
+      width: 350px;
+      height: 500px;
+      background-color: #519B8A;
+      border-radius: 5px;
+      box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      position: relative;
+      margin: 10px auto;
+      cursor: pointer;
+      margin-bottom: 40px;
+      text-decoration: none;
+    }
+
+    .profile-card-4 img {
+      transition: all 0.25s linear;
+    }
+
+    .profile-card-4 .profile-content {
+      position: relative;
+      padding: 15px;
+      background-color: #519B8A;
+    }
+
+    .profile-card-4 .profile-description {
+      color: #777;
+      padding: 10px;
+    }
+
+    .profile-card-4 .profile-overview {
+      padding: 15px 0px;
+    }
+
+    .profile-card-4 .profile-overview {
+      color: #777;
+    }
+
+    .profile-card-4 .profile-overview h4 {
+      color: #273751;
+      font-weight: bold;
+    }
+
+    .profile-card-4 .profile-content::before {
+      content: "";
+      position: absolute;
+      height: 20px;
+      top: -10px;
+      left: 0px;
+      right: 0px;
+      background-color: #519B8A;
+      z-index: 0;
+      transform: skewY(3deg);
+    }
+
+    .profile-card-4:hover img {
+      transform: rotate(5deg) scale(1.1, 1.1);
+      filter: brightness(110%);
+    }
+
+    .nom {
+      font-weight: bold;
+      font-style: italic;
+      font-size: 24px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .det {
+      font-weight: bold;
+      font-size: 18px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .imag {
+      width: 350px;
+      height: 350px;
+    }
+    
+    .minu {
+    	font-weight: normal;
+    	color: white;
+    }
+    
+    .whi {
+    	font-weight: bold;
+    	color: white;
+    }
+    
+    
+  </style>
+</head>
+
+<body>
+  <main>
+    <article>
+      <section>
+
+        
+          <!--banner-->
+          <div class="Dona2">
+            <div class="row">
+              <div class="col-lg-2 col-md-2 col-sm-2">
+                <img src="../dog-shelter/img/icona_scheda2.png" width="80px" height="auto" />
+              </div>
+              <div class="col-lg-8 col-md-8 col-sm-8">
+                <h2 class="titolo">Scheda di dettaglio</h2>
+                <h5 class="titolo">Trovi qui tutte le info dei nostri amici pelosi</h5>
+              </div>
+              <div class="col-lg-2 col-md-2 col-sm-2">
+                <img src="../dog-shelter/img/icona_scheda3.png" width="80px" height="auto" />
+              </div>
+            </div>
+          </div>
+
+		
+          <!--breadcrumb-->
+          <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="./home.html" th:text="#{pagina.home}"></a></li>
+              <li class="breadcrumb-item"><a href="./adozioni.html" th:text="#{pagina.adozioni}"></a></li>
+              <li class="breadcrumb-item active" aria-current="page" th:text="#{pagina.scheda}"></li>
+            </ol>
+          </nav>
+
+		<div class="container">
+          <!--carosello-->
+          <div class="row">
+
+            <div class="col-md-4">
+              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img th:src="@{'static/cani/' + ${caneScheda.id} + '.png'}" class="img-thumbnail d-block w-100" width="80" height="80" alt="...">
+                  </div>
+                  <div class="carousel-item" th:if="${caneScheda.immagine2}">
+                    <img th:src="@{'static/cani/' + ${caneScheda.id} + 'b.png'}" class="img-thumbnail d-block w-100" width="80" height="80" alt="...">
+                  </div>
+                  <div class="carousel-item" th:if="${caneScheda.immagine3}">
+                    <img th:src="@{'static/cani/' + ${caneScheda.id} + 'c.png'}" class="img-thumbnail d-block w-100" width="80" height="80" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" th:if="${caneScheda.immagine2}">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next" th:if="${caneScheda.immagine2}">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+			</div>
+			
+              <!--fine carosello-->
+
+            
+            <div class="col-md-1"></div>
+            <div class="col-md-3 riepilogo"><br />
+
+              <h5><span class="whi" th:text="#{label.nome} + ': '"></span><span class="minu" th:text="${caneScheda.nome}"></span></h5><br />
+
+              <h5><span class="whi" th:text="#{label.razza} + ': '"></span><span class="minu" th:text="${caneScheda.razza}"></span></h5><br />
+
+              <h5><span class="whi" th:text="#{label.eta} + ': '"></span><span class="minu" th:text="${caneScheda.eta} + ' anni'"></span></h5><br />
+
+              <h5><span class="whi" th:text="#{label.sesso} + ': '"></span><span class="minu" th:text="${caneScheda.sesso.equals('M') ? 'Maschio' : 'Femmina'}"></span></h5><br />
+
+              <h5 class="whi" th:text="#{label.vaccinazioni} + ': '"></h5>
+              <h5 class="minu" th:text="${caneScheda.vaccinazioni}"></h5><br />
+
+            </div>
+            <div class="col-md-1"></div>
+
+
+
+            <div class="col-md-3 riepilogo"><br />
+
+              <h5><span class="whi" th:text="#{label.sterilizzazione} + ': '"></span><span class="minu" th:text="${caneScheda.sterilizzazione ? 'Sì' : 'No'}"></span></h5><br />
+
+              <h5><span class="whi" th:text="#{label.microchip} + ': '"></span><span class="minu" th:text="${caneScheda.microchip ? 'Sì' : 'No'}"></span></h5><br />
+
+              <h5><span class="whi" th:text="#{label.data} + ': '"></span><span class="minu" th:text="${#dates.format(caneScheda.arrivo, 'dd-MM-yyyy')}"></span></h5><br />
+
+              <h5 class="whi" th:text="#{label.descrizione} + ': '"></h5>
+              <h5 class="minu" th:text="${caneScheda.descrizione}"></h5><br />
+
+            </div>
+          </div>
+          </div>
+      </section>
+    </article><br /><br />
+
+
+    <!--carosello cards-->
+    <section class="pt-5 pb-5">
+      <h3 class="titolo">Loro sono i nostri amici che stanno da più tempo in canile</h3>
+      <h3 class="titolo">Aiutali a trovare finalmente una casa!</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-6"></div>
+          <div class="col-6 text-right"><br />
+            <a class="btn btn-primary mb-3 mr-1 ourbutton" href="#carouselExampleIndicators2" role="button"
+              data-slide="prev">
+              <i class="fa fa-arrow-left"></i>
+            </a>
+            <a class="btn btn-primary mb-3 ourbutton" href="#carouselExampleIndicators2" role="button"
+              data-slide="next">
+              <i class="fa fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="col-12">
+            <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row">
+
+                    <div class="col-md-4 mb-3">
+                      <div class="profile-card-4 text-center"><a th:href="@{/scheda(id=${cani[0].id})}">
+                          <img th:src="@{'static/cani/' + ${cani[0].id} + '.png'}" class="img img-responsive imag"></a>
+                        <div class="profile-content ">
+                          <div class="profile-name">
+                            <p class="nom" th:text="${cani[0].nome}"></p>
+                            <p class="det" th:text="${cani[0].eta} + ' anni'"></p>
+                            <p class="det" th:text="'Arrivato il ' + ${#dates.format(cani[0].arrivo, 'dd-MM-yyyy')}"></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-3">
+                      <div class="profile-card-4 text-center"><a th:href="@{/scheda(id=${cani[1].id})}">
+                          <img th:src="@{'static/cani/' + ${cani[1].id} + '.png'}" class="img img-responsive imag"></a>
+                        <div class="profile-content ">
+                          <div class="profile-name">
+                            <p class="nom" th:text="${cani[1].nome}"></p>
+                            <p class="det" th:text="${cani[1].eta} + ' anni'"></p>
+                            <p class="det" th:text="'Arrivato il ' + ${#dates.format(cani[1].arrivo, 'dd-MM-yyyy')}"></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-3">
+                      <div class="profile-card-4 text-center"><a th:href="@{/scheda(id=${cani[2].id})}">
+                          <img th:src="@{'static/cani/' + ${cani[2].id} + '.png'}" class="img img-responsive imag"></a>
+                        <div class="profile-content ">
+                          <div class="profile-name">
+                            <p class="nom" th:text="${cani[2].nome}"></p>
+                            <p class="det" th:text="${cani[2].eta} + ' anni'"></p>
+                            <p class="det" th:text="'Arrivato il ' + ${#dates.format(cani[2].arrivo, 'dd-MM-yyyy')}"></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  </div>
+                  <div class="carousel-item">
+                  <div class="row">
+
+                    <div class="col-md-4 mb-3">
+                      <div class="profile-card-4 text-center"><a th:href="@{/scheda(id=${cani[3].id})}">
+                          <img th:src="@{'static/cani/' + ${cani[3].id} + '.png'}" class="img img-responsive imag"></a>
+                        <div class="profile-content ">
+                          <div class="profile-name">
+                            <p class="nom" th:text="${cani[3].nome}"></p>
+                            <p class="det" th:text="${cani[3].eta} + ' anni'"></p>
+                            <p class="det" th:text="'Arrivato il ' + ${#dates.format(cani[3].arrivo, 'dd-MM-yyyy')}"></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-3">
+                      <div class="profile-card-4 text-center"><a th:href="@{/scheda(id=${cani[4].id})}">
+                          <img th:src="@{'static/cani/' + ${cani[4].id} + '.png'}" class="img img-responsive imag"></a>
+                        <div class="profile-content ">
+                          <div class="profile-name">
+                            <p class="nom" th:text="${cani[4].nome}"></p>
+                            <p class="det" th:text="${cani[4].eta} + ' anni'"></p>
+                            <p class="det" th:text="'Arrivato il ' + ${#dates.format(cani[4].arrivo, 'dd-MM-yyyy')}"></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-3">
+                      <div class="profile-card-4 text-center"><a th:href="@{/scheda(id=${cani[5].id})}">
+                          <img th:src="@{'static/cani/' + ${cani[5].id} + '.png'}" class="img img-responsive imag"></a>
+                        <div class="profile-content ">
+                          <div class="profile-name">
+                            <p class="nom" th:text="${cani[5].nome}"></p>
+                            <p class="det" th:text="${cani[5].eta} + ' anni'"></p>
+                            <p class="det" th:text="'Arrivato il ' + ${#dates.format(cani[5].arrivo, 'dd-MM-yyyy')}"></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

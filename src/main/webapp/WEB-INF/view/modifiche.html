@@ -256,7 +256,7 @@
             </div>
               <div>
                 <img th:if="${cane.immagine2}" th:src="@{'static/cani/' + ${cane.id} + 'b.png'}">
-                <a class= "btn btn-danger btn-sm" th:if="${cane.immagine2}" th:href="@{riservata/eliminaimmagine2(id=${cane.id})}" th:text="#{button.elimina}"></a>
+                <a class= "btn btn-danger btn-sm" th:if="${cane.immagine2}" th:href="@{modifiche/eliminaimmagine2(id=${cane.id})}" th:text="#{button.elimina}"></a>
               </div><br />
 
             <div class="input-group mb-3" id="img3" th:style="${cane.immagine2 ? 'display:flex' : 'display:none'}">
@@ -264,7 +264,7 @@
             </div>
               <div>
                 <img th:if="${cane.immagine3}" th:src="@{'static/cani/' + ${cane.id} + 'c.png'}">
-                <a class= "btn btn-danger btn-sm" th:if="${cane.immagine3}" th:href="@{riservata/eliminaimmagine3(id=${cane.id})}" th:text="#{button.elimina}"></a>
+                <a class= "btn btn-danger btn-sm" th:if="${cane.immagine3}" th:href="@{modifiche/eliminaimmagine3(id=${cane.id})}" th:text="#{button.elimina}"></a>
               </div>
           </div>
 
