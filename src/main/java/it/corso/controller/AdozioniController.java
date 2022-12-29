@@ -46,7 +46,7 @@ public class AdozioniController {
 		} else {
 			ordine = ord;
 		}
-    	model.addAttribute("titolo", "Adozioni");
+    	model.addAttribute("titolo", "Adotta un cane");
 		model.addAttribute("cani", cani);
 		model.addAttribute("ordine", ordine);
 		return "adozioni";

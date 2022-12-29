@@ -48,7 +48,7 @@
             position: relative;
             margin: 10px auto;
             cursor: pointer;
-            margin-bottom:30px;
+            margin-bottom:40px;
             text-decoration: none;
         }
 
@@ -60,11 +60,6 @@
             position: relative;
             padding: 15px;
             background-color: #519B8A;
-        }
-
-
-        .profile-card-4 .profile-name p {
-            letter-spacing: 1.5px;
         }
 
         .profile-card-4 .profile-description {
@@ -118,8 +113,8 @@
       	
       	.nom {
       		font-weight:bold;
-	      	font-size: 22px;
-	      	margin-bottom: 1%;
+      		font-style:italic;
+	      	font-size: 24px;
 	      	color: black;
 	      	text-decoration: none;
       	}
@@ -202,15 +197,15 @@
                         <!--card-->
                         <div class="col-12 col-md-4 card-deck" th:each="cane : ${cani}">
                             <div class="profile-card-4 text-center"><a th:href="@{/schedaCane(id=${cane.id})}" >
-                                <img th:src="@{'static/cani/' + ${cane.id} + '.png'}" class="img img-responsive imag">
+                                <img th:src="@{'static/cani/' + ${cane.id} + '.png'}" class="img img-responsive imag"></a>
                                 <div class="profile-content ">
                                     <div class="profile-name">
-                                        <p class="nom" th:text="${cane.nome}"></p><br />
+                                        <p class="nom" th:text="${cane.nome}"></p>
                                         <p class="det" th:text="${cane.sesso.equals('M') ? 'Maschio' : 'Femmina'}"></p>
                                         <p class="det" th:text="${cane.eta} + ' anni'"></p>
                                     </div>
                                 </div>
-                            </a></div>
+                            </div>
                         </div>
                     </div>
                 </section>
