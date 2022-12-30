@@ -30,6 +30,12 @@
 
   <script src='main.js'></script>
   <style>
+  
+  	.row {
+    	margin-left: 0% !important;
+    	margin-right: 0% !important;
+    }
+  
     .Dona2 {
       background-color: #FBB74D;
       padding-top: 2%;
@@ -66,10 +72,6 @@
 
     .testo {
       text-align: center;
-    }
-
-    .breadcrumb {
-      font-size: 20px;
     }
 
     .profile-card-4 {
@@ -175,27 +177,18 @@
           <div class="Dona2">
             <div class="row">
               <div class="col-lg-2 col-md-2 col-sm-2">
-                <img src="../dog-shelter/img/icona_scheda2.png" width="80px" height="auto" />
+                <img th:src="@{static/image/icona_scheda1.png}" width="80px" height="auto" />
               </div>
               <div class="col-lg-8 col-md-8 col-sm-8">
                 <h2 class="titolo">Scheda di dettaglio</h2>
                 <h5 class="titolo">Trovi qui tutte le info dei nostri amici pelosi</h5>
               </div>
               <div class="col-lg-2 col-md-2 col-sm-2">
-                <img src="../dog-shelter/img/icona_scheda3.png" width="80px" height="auto" />
+                <img th:src="@{static/image/icona_scheda2.png}" width="80px" height="auto" />
               </div>
             </div>
-          </div>
+          </div><br /><br />
 
-		
-          <!--breadcrumb-->
-          <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="./home.html" th:text="#{pagina.home}"></a></li>
-              <li class="breadcrumb-item"><a href="./adozioni.html" th:text="#{pagina.adozioni}"></a></li>
-              <li class="breadcrumb-item active" aria-current="page" th:text="#{pagina.scheda}"></li>
-            </ol>
-          </nav>
 
 		<div class="container">
           <!--carosello-->
@@ -229,7 +222,7 @@
 
             
             <div class="col-md-1"></div>
-            <div class="col-md-3 riepilogo"><br />
+            <div class="col-md-3 riepilogo"><br /><br />
 
               <h5><span class="whi" th:text="#{label.nome} + ': '"></span><span class="minu" th:text="${caneScheda.nome}"></span></h5><br />
 
@@ -247,7 +240,7 @@
 
 
 
-            <div class="col-md-3 riepilogo"><br />
+            <div class="col-md-3 riepilogo"><br /><br />
 
               <h5><span class="whi" th:text="#{label.sterilizzazione} + ': '"></span><span class="minu" th:text="${caneScheda.sterilizzazione ? 'Sì' : 'No'}"></span></h5><br />
 

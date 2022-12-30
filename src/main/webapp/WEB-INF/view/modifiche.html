@@ -53,11 +53,7 @@
         margin-top: 4%;
         padding-top: 3%;
       }
-      
-      .breadcrumb {
-      	font-size: 20px;
-      
-      }
+     
 
       
     </style>
@@ -77,33 +73,34 @@
           <img th:src="@{static/image/icona_form2.png}" width="80px" height="auto" />
       </div>
     </div>
-  </div>
+  </div><br />
   
-  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-		<ol class="breadcrumb">
-		    <li class="breadcrumb-item"><a href="./home.html" th:text="#{pagina.home}"></a></li>
-		    <li class="breadcrumb-item"><a href="./riservata.html" th:text="#{pagina.riservata}"></a></li>
-		    <li class="breadcrumb-item active" aria-current="page" th:text="#{pagina.modifiche}"></li>
-		</ol>
-  </nav><br />
+  <div class="row">
+  		<div class="col-4"></div>
+  		<div class="col-4">
+  			<span th:if="${errore}" th:text="#{errore.salvataggio}" class="alert alert-danger" id="errore"></span>
+  		</div>
+  		<div class="col-4"></div>
+  </div><br /><br /><br />
+  
 		          
   <!--scegli cane seleziona-->
-  <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-4"></div>
-      <div class="col-lg-4 col-md-4 col-sm-4">
-        <span th:if="${errore}" th:text="#{errore.salvataggio}" class="alert alert-danger" id="errore"></span><br />
-        <form class="form_amministrativo" action="modifiche/scelta" method="POST">
-          <label for="validationCustom04" class="form-label"><h6 th:text="#{label.scelta} + ':'"></h6></label>
-          <select class="form-select" id="validationCustom04" name="scelta">
+<form class="row g-3" action="modifiche/scelta" method="POST">
+	<div class="col-4"></div>
+	<div class="col-3">
+		<select class="form-select" id="validationCustom04" name="scelta">
             <option selected disabled value="" th:text="#{label.seleziona}"></option>
             <option th:value="0" th:text="#{label.nuovo}" th:selected="${cane.id == 0}"></option>
             <option th:each="c : ${cani}" th:value="${c.id}" th:text="${c.nome}" th:selected="${cane.id == c.id}"></option>
-          </select>
-          <input class="btn btn-primary" type="submit" th:value="#{button.seleziona}" style="margin-bottom:4%;"></input>
-        </form>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-4"></div>
-  </div>  
+        </select>
+	</div>
+	<div class="col-1">
+		<input class="btn btn-primary" type="submit" th:value="#{button.seleziona}" style="margin-bottom:4%;"></input>
+	</div>
+	<div class="col-4"></div>
+</form><br />
+  
+   
 
 
 <div class="container formstyle">
@@ -285,7 +282,7 @@
     
     </div>
   </div>
-</div>
+
 
     <script>
       document.getElementById("inputGroupFile01").addEventListener("change", immagine2);

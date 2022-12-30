@@ -5,12 +5,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/donazione")
-public class DonazioneController {
+@RequestMapping("/privacy")
+public class PrivacyController {
 
-    @GetMapping
+	@GetMapping
     public String getPage(Model model) {
-    	model.addAttribute("titolo", "Donazioni");
-        return "donazione";
+    	model.addAttribute("titolo", "Privacy Policy");
+        return "privacy";
     }
 }

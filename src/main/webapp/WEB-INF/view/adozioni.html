@@ -17,6 +17,12 @@
 
     <script src='main.js'></script>
     <style>
+    	
+    	.row {
+    		margin-left: 0% !important;
+    		margin-right: 0% !important;
+    	}
+    
     	.btn-primary{
 	        margin-top: 2%;
 	        background-color: #519B8A;
@@ -110,10 +116,6 @@
         .ordina {
             padding-bottom: 2%;
         }
-        
-        .breadcrumb {
-      		font-size: 20px;
-      	}
       	
       	.nom {
       		font-weight:bold;
@@ -139,15 +141,7 @@
 </head>
 
 <body>
-    <div class="container">
-        <header>
-
-
-
-        </header>
-        <main>
-            <article>
-                <section>
+    
                     <!--banner-->
                     <div class="Dona2">
                         <div class="row">
@@ -164,34 +158,27 @@
                         </div>
                     </div>
 
-                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="./home.html" th:text="#{pagina.home}"></a></li>
-                            <li class="breadcrumb-item active" aria-current="page" th:text="#{pagina.adozioni}"></li>
-                        </ol>
-                    </nav>
 
                     <!--ordina per:-->
 
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-4"></div>
-                              <div class="col-lg-4 col-md-4 col-sm-4">
-                                  <form action="adozioni/ordina" method="POST"> 
-                                      <select class="form-select" name="ordine">
-                                        <option selected disabled value="" th:text="#{label.ordine}"></option>
-                                           <option value="alfabetico" th:text="#{label.alfabetico}" th:selected="${ordine.equals('alfabetico')}"></option>
-                                           <option value="ultimi" th:text="#{label.ultimi}" th:selected="${ordine.equals('ultimi')}"></option>
-                                           <option value="primi" th:text="#{label.primi}" th:selected="${ordine.equals('primi')}"></option>
-                                           <option value="crescente" th:text="#{label.crescente}" th:selected="${ordine.equals('crescente')}"></option>
-                                           <option value="decrescente" th:text="#{label.decrescente}" th:selected="${ordine.equals('decrescente')}"></option>
-                                           <option value="femmine" th:text="#{label.femmine}" th:selected="${ordine.equals('femmine')}"></option>
-                                           <option value="maschi" th:text="#{label.maschi}" th:selected="${ordine.equals('maschi')}"></option>
-                                       </select>
-                                       <input type="submit" th:value="#{button.seleziona}" class="btn btn-primary"> 
-                                   </form>
-                              </div>
-                          <div class="col-lg-4 col-md-4 col-sm-4"></div>
-                    </div><br /><br />
+                    <form class="row g-3" action="riservata/ordina" method="POST">
+						<div class="col-9"></div>
+					  	<div class="col-auto">
+					   		<select class="form-select" name="ordine">
+					        	<option selected disabled value="" th:text="#{label.ordine}"></option>
+					        	<option value="alfabetico" th:text="#{label.alfabetico}" th:selected="${ordine.equals('alfabetico')}"></option>
+					        	<option value="ultimi" th:text="#{label.ultimi}" th:selected="${ordine.equals('ultimi')}"></option>
+					        	<option value="primi" th:text="#{label.primi}" th:selected="${ordine.equals('primi')}"></option>
+					       		<option value="crescente" th:text="#{label.crescente}" th:selected="${ordine.equals('crescente')}"></option>
+					      		<option value="decrescente" th:text="#{label.decrescente}" th:selected="${ordine.equals('decrescente')}"></option>
+					       		<option value="femmine" th:text="#{label.femmine}" th:selected="${ordine.equals('femmine')}"></option>
+					    		<option value="maschi" th:text="#{label.maschi}" th:selected="${ordine.equals('maschi')}"></option>
+			            	</select>
+					  	</div>
+					  	<div class="col-auto">
+					    	<input type="submit" th:value="#{button.seleziona}" class="btn btn-primary">
+					  	</div>
+					</form><br />
 
 					<div><h5 class="tit">Clicca sull'immagine per aprire la scheda di dettaglio del cane</h5><br /></div>
 					
@@ -213,10 +200,6 @@
                             </div>
                         </div>
                     </div>
-                </section>
-            </article>
-        </main>
-    </div>
 
 </body>
 
