@@ -35,7 +35,7 @@
 
 /*pagina donazioni*/
 
-.testoDonaz {
+.testoDonaz { 
     background-color: transparent;
     color: white;
     padding-top: 6%;
@@ -43,7 +43,16 @@
     border-radius: 2%;
 }
 
-#sfondo {
+.testoDonaz1 {  /* per chi siamo*/
+    background-color: transparent;
+    color: white;
+    padding-top: 6%;
+    padding-bottom: 2%;
+    border-radius: 2%;
+    margin-bottom: 5%;
+}
+
+#sfondo {  /*anche per chi siamo*/
   border-radius: 8px;   
   background-image: url('../dog-shelter/img/banneradozioni.jpg'); 
   background-position: left top;
@@ -124,6 +133,11 @@
 
 }
 
+.testoeora {
+    margin-top: 8%;
+    margin-bottom: 5%;
+}
+
 /*colore orario*/
 .list-group-item {
     background-color: #ffffff;
@@ -132,8 +146,14 @@
 
 .list-group-item.active {
     background-color: #519B8A;
+    border-width: 2px;
+    border-color: #FBB74D;
 }
 
+.bordoora {
+    border-width: 2px;
+    border-color: #FBB74D;
+}
 
 /* CARD ADOZIONI */
 .profile-card-4 {
