@@ -348,13 +348,13 @@ h3{
 
 /*Banner sponsor adozioni*/
 .container1{ 
-  background-color: #F6A202;
+  background-color: #FBB74D;
   height:200px; 
   background-position: center ;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-left: 13%;
-  margin-right: 13%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 #rcorners3 {
@@ -362,33 +362,32 @@ h3{
   background-image: url('../dog-shelter/img/dogsBanner.jpg'); 
   background-position: left top;
   background-repeat: repeat;
-  padding: 20px; 
-  height: 180px;
+  padding: 1% 2% 2% 2%; 
+  height: 200px;
   text-shadow: 1px 0.5px #fdfdfd;
 }
 .buttonmat{ 
   border-radius: 8px;  
-  background-color: #006853;
+  background-color: #519B8A;
   height: 45px;
   min-width: 45%;
   min-width: 40%;
-  border: 1px solid rgb(27, 27, 27);
+  border: 1px solid white;
   font-size: smaller;
 }
 .buttonmat:hover{ 
-  background-color: #009f75;
+  background-color: #15c092;
   transition: 0.7s;
 }
 .container1:hover{ 
   transition: 0.7s;
-  opacity: 0.9;
   transform: scale(1.03);
 }
 #linkstyle {  /*stile link bottone banner donazioni*/
   text-decoration: none;
   font-weight: 450;
   font-size: medium;
-  color:rgb(22, 22, 22);
+  color: white;
 }
 
 

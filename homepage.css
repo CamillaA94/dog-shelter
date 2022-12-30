@@ -36,11 +36,24 @@
 /*pagina donazioni*/
 
 .testoDonaz {
-    background-color: #519B8A;
+    background-color: transparent;
     color: white;
-    padding: 5%;
+    padding-top: 6%;
+    padding-bottom: 2%;
     border-radius: 2%;
 }
+
+#sfondo {
+  border-radius: 8px;   
+  background-image: url('../dog-shelter/img/banneradozioni.jpg'); 
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 320px;
+  padding: 1% 2% 2% 2%; 
+
+}
+
 .padfoto {
     padding-top: 1%;
 }
@@ -75,8 +88,10 @@
 .bisogni {
     padding-top: 2%;
     text-align: center;
+    margin-top: 3%;
     margin-left: 2%;
     margin-right: 2%;
+    margin-bottom: 3%;
     border-style: solid;
     border-color: #519B8A;
 }
