@@ -364,7 +364,7 @@ h3{
   background-repeat: repeat;
   padding: 1% 2% 2% 2%; 
   height: 200px;
-  text-shadow: 1px 0.5px #fdfdfd;
+  /*text-shadow: 1px 0.2px #fdfdfd;*/
 }
 .buttonmat{ 
   border-radius: 8px;  
