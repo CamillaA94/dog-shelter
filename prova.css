@@ -1,8 +1,3 @@
-body{ 
-  height: 100%;
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
-}
 
 /*Header*/
 
@@ -39,6 +34,14 @@ body{
   padding-right: 0.1%;
   padding-left: 0.1%;
 }
+.hoverimgnav:hover{ 
+  
+  transition: 0.3s;
+  transform: scale(1.06);
+  filter:grayscale(100%);
+  
+}
+
 
 /*CSS Barra di navigazione*/
 .Mnavbar {
@@ -58,7 +61,7 @@ body{
 }
 .logo .wrapper {
   position: absolute;
-  top: -10px;
+  top: -8px;
   left:0;
   bottom: 200%;
   width: 100%;
@@ -82,8 +85,10 @@ body{
   text-shadow: 0px 0.5px #ffffff;
 }
 .nav-link{ 
-  color: #ffffffe9;
-  font-weight: 500;
+  color: #ffffffe9!important;
+  font-weight: 400!important;
+  font-size: 120%!important;
+  font-family:Arial, Helvetica, sans-serif!important;
 }
 .mNav-link{ 
       padding: 0rem 5rem!important;
@@ -91,8 +96,8 @@ body{
 .bg-darkm{
   background-color: #006853!important;
 }
-.nav{ 
-  --bs-nav-link-hover-color: #eb9700;  
+.navhover:hover{ 
+  color:  #eb9700!important;  
 }
 
 
@@ -293,138 +298,15 @@ h3{
 
 .posizioneCar{ 
   margin-top: 4%;
-  height: 100%;
+}
+.w-101 {
+  width: 100%!important;
+  height: 100%!important;
 }
 
-
-
-/*CARD ADOTTATI*/
-.h3postcard {
-  color: #2b2b2b!important;  
-  font-size:22px;  
-  padding-bottom: 10px;
-  color: rgb(229, 11, 11);
-  font-weight: 500;
-  /*line-height: 1em;*/
-  text-align: center;
+.carousel-control-next, .carousel-control-prev{ 
+  transition: opacity 0.6s ease-out!important;
 }
-
-.flex-container1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-
-.post_card-m {
-width: 250%;
-text-align:center;
-position: relative;
-height: 100%;
-border-radius:8px;
-transition: 0.3s;
-}
-@media only screen and (max-width: 767px) {
-.post_card-m {
-width: 100%;
-}
-}
-.post_card-m:hover {
-transform: scale(1.03);
-}
-.post_card_img-m img{
-border-radius:8px;
-}
-.post_card_img-m:hover {
-opacity: .85;
-}
-.post_card_title-m {
-font-family: 'Gotham-Medium',Helvetica,Arial,Lucida,sans-serif;
-padding:0px !important;
-  font-weight: 700;
-  font-size: 14px;
-  margin: 0 0 5px 0;
-line-height:1.2;
-}
-.post_card_profile_scripture-m {
-font-weight: 800;
-color: #363636;
-font-size: 12px;
-margin-bottom: 5px;
-line-height:1em;
-font-family: 'Gotham-Book',Helvetica,Arial,Lucida,sans-serif;
-position: absolute;
-}
-.post_card_meta {
-height: 110px;
-background: transparent;
-padding-top: 7%;
-}
-@media screen and (min-width: 2000px) {
-.post_card_meta {
-padding-top: 5%;
-}
-.post_card_meta.series  {
-height: 110px !important;
-padding-top: 5% !important;
-}
-.post_card_scripture-m {
-bottom: 5% !important;
-}
-}
-@media screen and (min-width: 768px) and (max-width: 1115px) {
-.post_card_meta {
-height: 110px;
-}
-}
-.post_card_meta.blog {
-padding-top: 7%;
-height: 120px;
-}
-.post_card_meta.series  {
-padding-top: 7%;
-height: 95px;
-}
-.post_card_scripture {
-color: #AAB2BD;
-font-weight: 700;
-font-size: 12px;
-position: absolute;
-bottom: 5%;
-line-height:1em;
-}
-.post_card_meta.series .post_card_scripture  {
-bottom:10%;
-}
-.post_card_profile_scripture {
-color: #222;
-font-weight: 700;
-font-size: 12px;
-position: absolute;
-line-height:1.5em;
-}
-.post_card_profile_category {
-color: #222;
-font-weight: 700;
-font-size: 12px;
-position: absolute;
-line-height:1.5em;
-}
-
-
-.carousel-cell-m {
-  width:25%;
-  padding-left: 0%;
-  padding-right: 0%;
-  padding-top: 10%;
-
-}
-
-/*card adottati*/
-
-
-
-
 
 /* card info*/
 .carousel-cell-mc img {
@@ -498,7 +380,7 @@ line-height:1.5em;
   transition: 0.7s;
 }
 .container1:hover{ 
-  transition: 0.5s;
+  transition: 0.7s;
   opacity: 0.9;
   transform: scale(1.03);
 }
@@ -511,8 +393,49 @@ line-height:1.5em;
 
 
 
+/*Card Adottanti*/
+.card{ 
+  border-radius: 8px 8px 50px 50px!important;
+  margin-bottom: 10%;
+  border: 1px solid rgb(109, 109, 109)!important  ;
+  color: #1e1e1e;
+  font-size: 100%;
+
+}
+.cardimg{ 
+  border-radius: 8px!important;
+
+}
+
+.card:hover{ 
+  transition: 0.3s;
+  transform: scale(1.04);
+  background-color: #eb9700;
+}
+.cardimg:hover{ 
+  
+  transition: 0.3s;
+  transform: scale(1.06);
+  filter:grayscale(100%);
+  
+}
 
 
+
+
+#testoadott{ 
+  margin-top: 1rem!important;
+  margin-bottom: 1rem!important;
+  padding-top: 3.5%;
+  padding-bottom: 1.2%;
+  font-size: 190%!important;
+}
+
+.testocardadottati{
+  font-size: 90%!important;
+
+  
+ }
 
 
 
