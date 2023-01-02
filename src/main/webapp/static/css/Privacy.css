@@ -1,0 +1,24 @@
+.container{
+    margin-top: 50px;
+    max-width: 90%;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+p{
+    margin-top: 30px;
+}
+
+.Dona2{
+    background-color: #FBB74D;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-top:0;
+    margin-bottom: 1%;
+    text-align: center;
+    color: black;
+}
+.row{
+    margin-left: 0%;
+    margin-right: 0%;
+}

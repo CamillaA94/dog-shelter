@@ -1,0 +1,249 @@
+
+/*home css*/
+
+.home {
+  color: #519B8A;
+}
+
+.iter {
+  color: #737170;
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+
+.titoloiter {
+  color: #4E4D4C;
+  text-align: center;
+}
+.tondi{
+  padding-top: 10%;
+}
+.tondi:hover{
+  transform: scale(1.09);
+}
+
+
+
+
+
+
+#footer .footer-newsletter {
+  padding: 50px 0;
+  background-color: #f5f5f5;
+  text-align: center;
+  font-size: 15px;
+  color: black;
+}
+
+#footer .footer-newsletter h4 {
+  font-size: 24px;
+  margin: 0 0 20px 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 600;
+  color: black;
+}
+
+#footer .footer-newsletter form {
+  margin-top: 30px;
+  background: #fff;
+  padding: 6px 10px;
+  position: relative;
+  border-radius: 50px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.06);
+  text-align: left;
+}
+
+#footer .footer-newsletter form input[type=email] {
+  border: 0;
+  padding: 4px 8px;
+  width: calc(100% - 100px);
+}
+
+#footer .footer-newsletter form input[type=submit] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border: 0;
+  background: none;
+  font-size: 16px;
+  padding: 0 20px;
+  background-color: #04AA6D;
+  color: #fff;
+  transition: 0.3s;
+  border-radius: 50px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+#footer .footer-newsletter form input[type=submit]:hover {
+  background-color: #90c4b1;
+}
+.rece{
+  text-align: center;
+  color:#737170;
+
+}
+h3{
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  color:#4E4D4C;
+}
+
+
+/* carosello css */
+
+.posizioneCar{ 
+  margin-top: 4%;
+}
+.w-101 {
+  width: 100%!important;
+  height: 100%!important;
+}
+
+.carousel-control-next, .carousel-control-prev{ 
+  transition: opacity 0.6s ease-out!important;
+}
+
+/* card info*/
+.carousel-cell-mc img {
+  width:70% !important;
+  height:auto;
+}
+
+
+@media (min-width: 768px) and (max-width:980px){
+  .carousel-cell-mc {
+      width:25%
+      
+  }
+}
+@media (max-width:767px){
+  .carousel-cell-mc {
+      width:50%
+  }
+}
+@media (max-width:479px){
+  .carousel-cell-mc {
+      width: 50%
+  }
+}
+.carousel-card {
+  height:300px!important;
+ background:white;
+ border-radius: 4px;
+ box-shadow:0 0.0625rem 0.125rem 0 rgba(27, 27, 27, 0.541)
+}
+
+.main-carousel-m .carousel-card-m .card-description {
+      padding: 0.5em 0 0.5em 0.5em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+
+/*Banner sponsor adozioni*/
+.container1{ 
+  background-color: #F6A202;
+  height:200px; 
+  background-position: center ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 13%;
+  margin-right: 13%;
+}
+
+#rcorners3 {
+  border-radius: 8px;   
+  background-image: url('../dog-shelter/img/dogsBanner.jpg'); 
+  background-position: left top;
+  background-repeat: repeat;
+  padding: 20px; 
+  height: 180px;
+  text-shadow: 1px 0.5px #fdfdfd;
+}
+.buttonmat{ 
+  border-radius: 8px;  
+  background-color: #00795d;
+  height: 45px;
+  min-width: 45%;
+  min-width: 40%;
+  border: 1px solid rgb(27, 27, 27);
+  font-size: smaller;
+}
+.buttonmat:hover{ 
+  background-color: #519B8A;
+  transition: 0.7s;
+}
+.container1:hover{ 
+  transition: 0.7s;
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+#linkstyle {  /*stile link bottone banner donazioni*/
+  text-decoration: none;
+  font-weight: 450;
+  font-size: medium;
+  color:rgb(22, 22, 22);
+}
+
+
+
+/*Card Adottanti*/
+.card{ 
+  border-radius: 8px 8px 50px 50px!important;
+  margin-bottom: 10%;
+  border: 1px solid rgb(109, 109, 109)!important  ;
+  color: #1e1e1e;
+  font-size: 100%;
+
+}
+.cardimg{ 
+  border-radius: 8px!important;
+
+}
+
+.card:hover{ 
+  transition: 0.3s;
+  transform: scale(1.04);
+  background-color: #519B8A;
+}
+.cardimg:hover{ 
+  
+  transition: 0.3s;
+  transform: scale(1.06);
+  filter:blur(0.75px);
+  
+}
+
+#testoadott{ 
+  margin-top: 1rem!important;
+  margin-bottom: 1rem!important;
+  padding-top: 3.5%;
+  padding-bottom: 1.2%;
+  font-size: 190%!important;
+}
+
+.testocardadottati{
+  font-size: 90%!important;
+
+  
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
