@@ -32,34 +32,38 @@
     margin-top: 3%;
     margin-bottom: 5%;
 }
-
-/*pagina donazioni*/
-
-.testoDonaz { 
-    background-color: transparent;
-    color: white;
-    padding-top: 6%;
-    padding-bottom: 2%;
-    border-radius: 2%;
-}
-
 .testoDonaz1 {  /* per chi siamo*/
     background-color: transparent;
     color: white;
-    padding-top: 6%;
+    padding-top: 3%;
     padding-bottom: 2%;
     border-radius: 2%;
     margin-bottom: 5%;
 }
 
+/*pagina donazioni*/
+
+.testoDonaz { 
+    background-color: #519B8A;
+    color: white;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    border-radius: 2%;
+}
+
+#testobanner {
+    margin-top: 10%;
+    background-color: rgb(81, 155, 138, 0.6)
+}
+ 
+
 #sfondo {  /*anche per chi siamo*/
   border-radius: 8px;   
-  background-image: url('../dog-shelter/img/banneradozioni.jpg'); 
-  background-position: left top;
+  background-image: url('../dog-shelter/img/banneradozioniMirror.jpg'); 
+  background-position: right top;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 320px;
-  padding: 1% 2% 2% 2%; 
+  padding: 0% 2% 2% 2%; 
 
 }
 
@@ -77,7 +81,7 @@
 }
 .titoloiter {
     text-align: center;
-    padding-top: 8%;
+    padding-top: 5%;
     padding-bottom: 5%;
 }
 .iter {
@@ -97,7 +101,7 @@
 .bisogni {
     padding-top: 2%;
     text-align: center;
-    margin-top: 3%;
+    margin-top: 5%;
     margin-left: 2%;
     margin-right: 2%;
     margin-bottom: 3%;
