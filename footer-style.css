@@ -11,6 +11,12 @@ html,body {
     background-color: #519B8A;
     color:white;
   }
+
+.row {
+    margin-left: 0% !important;
+    margin-right: 0% !important;
+}
+
 .icon_center {
   text-align: center;
     margin-left: auto;
