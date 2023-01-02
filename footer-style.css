@@ -33,6 +33,10 @@ html,body {
   padding-left:0;
 }
 
+#position {  /*id per posizione logo che ha dimensioni diverse*/
+  margin-top: 5%;
+}
+
 .padcontent {    /*padding footer*/
   padding-top: 3%;
   padding-left: 2%;
