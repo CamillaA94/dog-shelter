@@ -263,19 +263,35 @@
         </main>
 
         <script src="js/bootstrap.min.js"></script>
-       
-        
-          <!--footer-->
-          <div  class="container">
-      <div class="row ">
-        <div class="col-lg-12 col-12 col-sm-12" id="backtop">
-          <a href="#" data-bs-toggle="backtop" class="back-to-top">
-            <img src="../dog-shelter/loghi/backtotop.png" class="overfooter" width="30px" heigth="auto"  />
-          </a>
-        </div>
-      </div>
-    </div>
-
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+              
+        <script>
+          // scrollando in giù di 20 px compare il bottone per tornare su
+          window.onscroll = function() {scrollFunction()};
+      
+          function scrollFunction() {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                  document.getElementById("myBtn").style.display = "block";
+              } else {
+                  document.getElementById("myBtn").style.display = "none";
+              }
+            
+          }
+      
+          // Cliccando il bottone, si torna su 
+          function topFunction() {
+          
+              $('html, body').animate({scrollTop:0}, 'slow');
+          }
+        </script>
+      
+        <!--footer-->
+        <div class="row">
+          <div class="col-lg-10"></div>
+          <div class="col-lg-2">
+            <button onclick="topFunction()" id="myBtn" title="Go to top">Torna su</button>
+          </div>
+        </div> 
     
      <footer id="footer">
 
