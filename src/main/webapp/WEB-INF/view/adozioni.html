@@ -6,16 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title th:text="${titolo}"></title>
-    <link type="text/css" rel="stylesheet" href="../FRONT/bootstrap-5.2.3-dist/css/bootstrap.min.css">
-    <link type="text/js" rel="stylesheet" href="../FRONT/bootstrap-5.2.3-dist/js/bootstrap.min.js">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-
+    <link rel="stylesheet" type="text/css" th:href="@{static/css/Footer_css.css}">    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-
     <script src='main.js'></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <style>
     	
     	.row {
@@ -200,6 +198,114 @@
                             </div>
                         </div>
                     </div>
+
+
+                    <script>
+                        // scrollando in giù di 20 px compare il bottone per tornare su
+                        window.onscroll = function() {scrollFunction()};
+                    
+                        function scrollFunction() {
+                            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                                document.getElementById("myBtn").style.display = "block";
+                            } else {
+                                document.getElementById("myBtn").style.display = "none";
+                            }
+                          
+                        }
+                    
+                        // Cliccando il bottone, si torna su 
+                        function topFunction() {
+                        
+                            $('html, body').animate({scrollTop:0}, 'slow');
+                        }
+                      </script>
+                    
+                      <!--footer-->
+                      <div class="row">
+                        <div class="col-lg-10"></div>
+                        <div class="col-lg-2">
+                          <button onclick="topFunction()" id="myBtn" title="Go to top">Vai su</button>
+                        </div>
+                      </div> 
+                    
+                         <footer id="footer">
+                         
+                            
+                                <div class="container">
+                                <!--loghi e immagini-->
+                                <div class="row icon_center">
+                                  <div class="col-lg-3 col-md-3 col-sm-3 col-12 padimg">
+                                    <a th:href="@{/home}" data-bs-toggle="backtop" class="back-to-top">
+                                      <img th:src="@{static/image/logofooter.png}" width="150px" heigth="auto" id="position" />
+                                    </a>
+                                  </div>
+                                  <div class="col-lg-3 col-md-3 col-sm-3 col-12 padimg">
+                                    <img th:src="@{static/image/leidalogobianco.png}" width="120px" heigth="auto" />
+                                  </div>
+                                  <div class="col-lg-3 col-md-3 col-sm-3 col-12 padimg">
+                                    <img th:src="@{static/image/enpalogo.png}" width="80px" heigth="auto" />
+                                  </div>
+                                  <div class="col-lg-3 col-md-3 col-sm-3 col-12 padimg">
+                                    <img th:src="@{static/image/ancdvlogo.png}" width="80px" heigth="auto"/>
+                                  </div>
+                                </div>
+                                 
+                    
+                                  <!--cotenuto footer-->
+                                  <div class="row footer-align padcontent">
+                                      
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-12"><h6>Recapiti e contatti</h6>
+                                      <div class="col-12">
+                                        <ul class="elenco">
+                                          <li>Aperti dal lunedì alla domenica<br>orario: 10:00 - 18:00</li>
+                                          <li> Email: amicia4zampe@gmail.com </li>
+                                          <li>Tel: 06 98875859</li>
+                                        </ul></div></div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-12"><h6></h6></div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-12"><h6>Informazioni</h6>
+                                      <div class="col-12">
+                                        <ul class="elenco">
+                                          <li><a class="linkstyle" th:href="@{/privacy}">Privacy policy</a></li>
+                                          <li><a class="linkstyle" th:href="@{/cookie}">Cookie policy</a></li>
+                                          <li><a class="linkstyle" th:href="@{/faq}">FAQ</a></li>
+                                         <!-- <li><a class="linkstyle" href="">Termini e condizioni</a></li> -->
+                                        </ul>
+                                      </div></div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-12"><h6></h6></div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-12"><h6>Link utili</h6>
+                                      <div class="col-12">
+                                        <ul class="elenco">
+                                          <li><a class="linkstyle" th:href="@{/chiSiamo}">Chi siamo</a></li>
+                                          <li><a class="linkstyle" th:href="@{/adozioni}">Adotta un cane</a></li>
+                                          <li><a class="linkstyle" th:href="@{/donazioni}">Donazioni</a></li>
+                                          <li><a class="linkstyle" th:href="@{/riservata}">Accesso staff</a></li>
+                                        </ul>
+                                      </div></div>
+                                  </div>
+                                  <br>
+                                   
+                                  <div class="row footer_center">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-12"></div>
+                                    <div class="col-lg-8 col-md-8 col-sm-8 col-12">
+                                      <p>Amici a 4 zampe S.R.L. Via della Magliana, 856 - 00148 Roma (RM), IT P.IVA IT09677741218 
+                                      </p>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-12"></div>
+                                  </div>
+                                  
+                                  <div class="row footer_center">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-12"></div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                                      <p> © 2022 Jarm68. All rights reserved.
+                                      </p>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-12"></div>
+                                  </div>
+                                
+                                </div>
+                              
+                    
+                          </footer>
 
 </body>
 
