@@ -14,7 +14,7 @@ public class HomeController {
     @GetMapping
     public String getPage(Model model) {
     	model.addAttribute("titolo", "Amici a 4 zampe");
-        model.addAttribute("cani", caneService.getCaniPrimi());
+        model.addAttribute("cani", caneService.getCaniUltimi());
         return "home";
     }
 }
