@@ -21,7 +21,7 @@
 }
 .Dona3 {
    background-color: #FBB74D;
-    padding-top: 6.5%;
+    padding-top: 8%;
     padding-bottom: 0.5%;
     margin-bottom: 5%;
     text-align: center;
@@ -244,3 +244,7 @@
 }
 
 /*fine card*/
+.container-fluid{
+    padding-right: 0% !important;
+    padding-left: 0% !important;
+}
