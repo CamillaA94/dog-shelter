@@ -105,89 +105,75 @@ color: #519b8a!important;;
 /*ScreenSize uguale o meno di 200px*/
 @media screen and (max-width: 200px){ 
 
-  p{ 
+  #Mheaderbartext{ 
       font-size: 5px !important;
   } 
 
-  h3{ font-size: 10px !important;}
 }
 
 @media screen and (min-width: 200px) and (max-width: 265px) { 
 
-  p{ 
+  #Mheaderbartext{ 
       font-size: 6px !important;
   }
-  h3{ font-size: 12px !important;}
+ 
 }
 
 @media screen and (min-width: 265px) and (max-width: 305px) { 
 
-  p{ 
+  #Mheaderbartext{ 
       font-size: 7px !important;
   }
 
-  
-  h3{ font-size: 14px !important;}
+ 
 }
 
 @media screen and (min-width: 305px) and (max-width: 450px) { 
 
-  p{ 
+  #Mheaderbartext{ 
       font-size: 7px !important;
   }
   
-  h3{ font-size: 14px !important;}
+
 }
 
 @media screen and (min-width: 450px) and (max-width: 600px) { 
 
-  p{ 
+  #Mheaderbartext{ 
       font-size: 9px !important;
   }
   
-  h3{ font-size: 15px !important;}
+
 }
 
 @media screen and (min-width: 600px) and (max-width: 800px) { 
 
-  p{ 
+  #Mheaderbartext{ 
       font-size: 10px !important;
   }
   
-  h3{ font-size: 17px !important;}
+
 }
 
 @media screen and (min-width: 800px) and (max-width: 1000px) { 
 
-  p{ 
+  #Mheaderbartext{ 
       font-size: 11px !important;
   }
   
-  h3{ font-size: 20px !important;}
+
 }
 
 @media screen and (min-width: 1000px){ 
 
-  p{ 
+  #Mheaderbartext{ 
       font-size: 13px !important;
       
   }
   
-  h3{ font-size: 20px !important;}
+
 
   .nav-item{ 
       font-size: 20px;
   }
-}
-
-
-.ro{  
-  margin-right: 0%!important;
-  margin-left: 0%!important;
-}
-
-
-.margini{  
-  margin-right: 0%!important;
-  margin-left: 0%!important;
 }
