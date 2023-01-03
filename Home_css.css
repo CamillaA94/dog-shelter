@@ -156,9 +156,9 @@ h3{
 .buttonmat{ 
   border-radius: 8px;  
   background-color: #519B8A;
-  height: 60%;
   min-width: 40%;
   border: 1px solid white;
+  margin-top:2%;
 }
 
 .buttonmat:hover{ 
