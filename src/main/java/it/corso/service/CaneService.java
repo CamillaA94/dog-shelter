@@ -5,7 +5,7 @@ import it.corso.model.Cane;
 public interface CaneService {
 
 	String REGEX = "[a-zA-Zàèéìòù\\s']{1,30}";
-	String REGEXD ="[a-zA-Zàèéìòù\\s!,;.-°']{1,10000}";
+	String REGEXD ="[a-zA-Zàèéìòù\\s!,;.°'-]{1,10000}";
 	boolean checkCane(String... dati);
 	public void registraCane(Cane cane, int id, String nome, String razza, String eta, String sesso, boolean sterilizzazione, String[]vax, boolean microchip, String descrizione, String data);
 	public Cane getCaneById(int id);
