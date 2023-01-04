@@ -20,6 +20,7 @@
     src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" th:href="@{static/css/Header_css.css}">
   <link rel="stylesheet" type="text/css" th:href="@{static/css/Footer_css.css}">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
@@ -35,13 +36,13 @@
     }
   
     .Dona2 {
-      background-color: #FBB74D;
-      padding-top: 2%;
-      padding-bottom: 2%;
-      margin-top: 0;
-      margin-bottom: 2%;
-      text-align: center;
-      color: black;
+      	background-color: #FBB74D;
+    	padding-top: 6%;
+   		margin-top:2.4%;
+    	padding-bottom: 0.5%;
+    	margin-bottom: 5%;
+    	text-align: center;
+    	color: black;
     }
 
     .riepilogo {
@@ -162,6 +163,85 @@
     }
     
     
+    /*media bannergiallochisiamo per padding top dalla navbar*/
+@media screen and (max-width:1676px) {
+
+    .bannergiallo{ padding-top: 7%!important;
+    }
+}
+@media screen and (max-width:1560px) {
+
+    .bannergiallo{ padding-top: 7.5%!important;
+    }
+}
+@media screen and (max-width:1451px) {
+
+    .bannergiallo{ padding-top: 8%!important;
+    }
+}
+@media screen and (max-width:1350px) {
+
+    .bannergiallo{ padding-top: 9%!important;
+    }
+}
+@media screen and (max-width:1230px) {
+
+    .bannergiallo{ padding-top: 10%!important;
+    }
+}
+@media screen and (max-width:1120px) {
+
+    .bannergiallo{ padding-top: 11%!important;
+    }
+}
+@media screen and (max-width:1010px) {
+
+    .bannergiallo{ padding-top: 12%!important;
+    }
+}
+
+@media screen and (max-width:920px) {
+
+    .bannergiallo{ padding-top: 13%!important;
+    }
+}
+@media screen and (max-width:810px) {
+
+    .bannergiallo{ padding-top: 13%!important;
+    }
+}
+@media screen and (max-width:720px) {
+
+    .bannergiallo{ padding-top: 14%!important;
+    }
+}
+@media screen and (max-width:620px) {
+
+    .bannergiallo{ padding-top: 15%!important;
+    }
+}
+@media screen and (max-width:520px) {
+
+    .bannergiallo{ padding-top: 16%!important;
+    }
+}
+@media screen and (max-width:420px) {
+
+    .bannergiallo{ padding-top: 20%!important;
+    }
+}
+@media screen and (max-width:330px) {
+
+    .bannergiallo{ padding-top: 25%!important;
+    }
+}
+@media screen and (max-width:280px) {
+
+    .bannergiallo{ padding-top: 30%!important;
+    }
+}
+    
+    
   </style>
 </head>
 
@@ -170,9 +250,76 @@
     <article>
       <section>
 
+
+		<!--HeadBar e NavBar-->
+		    <div class="container-fluid"  >
+		        <!--Header-->
+		        <header class="position">
+		                <div class="row"  >
+		                    <div class="Mheaderbar col-12 col-md-12 " >
+		                        <ul type="none">
+		                            <li>
+		                                <p id="Mheaderbartext">Trova il tuo prossimo migliore amico! Resta in contatto con noi:
+		                                    <img th:src="@{static/image/cornetta.png}" alt="cornetta" width="18" height="18"
+		                                        class="cornetta">
+		                                    <a id="linktel" href="tel:0239623793" target="_blank">06 98875859</a>
+		                                </p>
+		                            </li>
+		                        </ul>
+		                    </div>
+		                </div>
+		                <nav class="navBase">
+		                  <div class="row mContainer ">
+		                      <div class="col-12 col-md-12 " style="padding-right: 0;padding-left: 0;">
+		                          <nav class="navbar Mnavbar bg-darkm justify-content-center">
+		                              <ul class="nav ">
+		                                  <li class="nav-item"><a class="navhover nav-link mNav-link" th:href="@{/home}" >Home</a></li>
+		                                  <li class="nav-item"><a class="navhover nav-link mNav-link" th:href="@{/adozioni}">Adotta un cane</a></li>
+		                                  <li class="nav-item"><a class="nav-link logo " href="#">
+		                                          <div class="wrapper  bg-darkm "><img
+		                                                  th:src="@{static/image/logopaginaPWcane.png}" class="hoverimgnav">
+		                                          </div>
+		                                      </a></li>
+		                                  <li class="nav-item"><a class="navhover nav-link mNav-link" th:href="@{/chiSiamo}">Chi siamo&nbsp</a></li>
+		                                  <li class="nav-item"><a class="navhover nav-link mNav-link" th:href="@{/donazioni}">Donazioni</a></li>
+		                              </ul>
+		                          </nav>
+		                      </div>
+		                  </div>
+		              </nav>
+		      <nav class="navMedia">
+		                  <div class="row mContainer ">
+		                      <div class="col-12 col-md-12 " style="padding-right: 0;padding-left: 0;">
+		                          <nav class="navbar Mnavbar bg-darkm justify-content-center">
+		                             
+		                              <div class="row nav nav2row">
+		                                <div class="col-6 col-sm-1  col-lg-1 justify-content-end  nav-item"><a class="nav-link logo2 " href="#">
+		                                  <div class="bg-darkm wrapper2  "><img
+		                                    th:src="@{static/image/logofooter.png}" class="hoverimgnav imgnavbar2">
+		                                  </div></a></div>
+		                                  <div class="col-6 col-sm-1  col-lg-1 justify-content-end  nav-item"><a class="nav-link logo2 " href="#">
+		                                    <div class="bg-darkm wrapper2  "><img
+		                                      th:src="@{static/image/logonav2.png}" class="hoverimgnav imgnavbar3">
+		                                    </div></a></div>
+		                                <div class="col-6 col-sm-2  col-lg-2  justify-content-end nav-item navbar2-item "><a class="nav-link2 " th:href="@{/home}">Home</a></div>
+		                                <div class="col-6 col-sm-3  col-lg-3 justify-content-end  nav-item navbar2-item "><a class="nav-link2 " th:href="@{/adozioni}">Adotta</a></div>
+		                                <div class="col-6 col-sm-3 col-lg-3  justify-content-end nav-item navbar2-item "><a class="nav-link2 " th:href="@{/chiSiamo}">Chi siamo &nbsp </a></div>
+		                                <div class="col-6 col-sm-2  col-lg-2 justify-content-end  nav-item navbar2-item "><a class="nav-link2 " th:href="@{/donazioni}">Donazioni</a></div>
+		                              </div>
+		
+		
+		 
+		
+		                          </nav>
+		                      </div>
+		                  </div>
+		                </nav>
+		        </header>
+		    </div>
+
         
           <!--banner-->
-          <div class="Dona2">
+          <div class="Dona2 bannergiallo">
             <div class="row">
               <div class="col-lg-2 col-md-2 col-sm-2">
                 <img th:src="@{static/image/icona_scheda1.png}" width="80px" height="auto" />
@@ -439,9 +586,9 @@
           <div class="col-lg-2 col-md-2 col-sm-2 col-12"><h6>Informazioni</h6>
             <div class="col-12">
             <ul class="elenco">
-              <li><a class="linkstyle" th:href="@{/privacy}">Privacy policy</a></li>
-              <li><a class="linkstyle" th:href="@{/cookie}">Cookie policy</a></li>
-              <li><a class="linkstyle" th:href="@{/faq}">FAQ</a></li>
+              <li><a class="linkstyle" th:href="@{/privacy}" target="_blank">Privacy policy</a></li>
+              <li><a class="linkstyle" th:href="@{/cookie}" target="_blank">Cookie policy</a></li>
+              <li><a class="linkstyle" th:href="@{/faq}" target="_blank">FAQ</a></li>
              <!-- <li><a class="linkstyle" href="">Termini e condizioni</a></li> -->
             </ul>
             </div></div>

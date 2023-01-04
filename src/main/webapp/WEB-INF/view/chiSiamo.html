@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title th:text="${titolo}"></title>
+  <link type="text/css" rel="stylesheet" th:href="@{static/css/bootstrap.min.css}">
+  <link type="text/css" rel="stylesheet" th:href="@{static/css/Header_css.css}">
+  <link type="text/css" rel="stylesheet" th:href="@{static/css/Stile.css}">
+  <link type="text/css" rel="stylesheet" th:href="@{static/css/Footer_css.css}">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+  <!--Body-->
+
+<body>
+
+  <!--Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+  <!--HeadBar e NavBar-->
+  <div class="container-fluid">
+    <!--Header-->
+    <header class="position">
+      <div class="row">
+        <div class="Mheaderbar col-12 col-md-12 ">
+          <ul type="none">
+            <li>
+              <p id="Mheaderbartext">Trova il tuo prossimo migliore amico! Resta in contatto con noi:
+                <img th:src="@{static/image/cornetta.png}" alt="cornetta" width="18" height="18" class="cornetta">
+                <a id="linktel" href="tel:0239623793" target="_blank">06 98875859</a>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <nav class="navBase">
+        <div class="row mContainer ">
+          <div class="col-12 col-md-12 " style="padding-right: 0;padding-left: 0;">
+            <nav class="navbar Mnavbar bg-darkm justify-content-center">
+              <ul class="nav ">
+                <li class="nav-item"><a class="navhover nav-link mNav-link" th:href="@{/home}">Home</a>
+                </li>
+                <li class="nav-item"><a class="navhover nav-link mNav-link"
+                    th:href="@{/adozioni}">Adotta un cane</a></li>
+                <li class="nav-item"><a class="nav-link logo " href="#">
+                    <div class="wrapper  bg-darkm "><img th:src="@{static/image/logopaginaPWcane.png}" class="hoverimgnav">
+                    </div>
+                  </a></li>
+                <li class="nav-item"><a class="navhover nav-link mNav-link" th:href="@{/chiSiamo}">Chi
+                    siamo&nbsp</a></li>
+                <li class="nav-item"><a class="navhover nav-link mNav-link"
+                    th:href="@{/donazioni}">Donazioni</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </nav>
+      <nav class="navMedia">
+        <div class="row mContainer ">
+          <div class="col-12 col-md-12 " style="padding-right: 0;padding-left: 0;">
+            <nav class="navbar Mnavbar bg-darkm justify-content-center">
+
+              <div class="row nav nav2row">
+                <div class="col-6 col-sm-1  col-lg-1 justify-content-end  nav-item"><a class="nav-link logo2 " href="#">
+                    <div class="bg-darkm wrapper2  "><img th:src="@{static/image/logofooter.png}"
+                        class="hoverimgnav imgnavbar2">
+                    </div>
+                  </a></div>
+                <div class="col-6 col-sm-1  col-lg-1 justify-content-end  nav-item"><a class="nav-link logo2 " href="#">
+                    <div class="bg-darkm wrapper2  "><img th:src="@{static/image/logonav2.png}"
+                        class="hoverimgnav imgnavbar3">
+                    </div>
+                  </a></div>
+                <div class="col-6 col-sm-2  col-lg-2  justify-content-end nav-item navbar2-item "><a class="nav-link2 "
+                    th:href="@{/home}">Home</a></div>
+                <div class="col-6 col-sm-3  col-lg-3 justify-content-end  nav-item navbar2-item "><a class="nav-link2 "
+                    th:href="@{/adozioni}">Adotta </a></div>
+                <div class="col-6 col-sm-3 col-lg-3  justify-content-end nav-item navbar2-item "><a class="nav-link2 "
+                    th:href="@{/chiSiamo}">Chi siamo &nbsp </a></div>
+                <div class="col-6 col-sm-2  col-lg-2 justify-content-end  nav-item navbar2-item "><a class="nav-link2 "
+                    th:href="@{/donazioni}">Donazioni</a></div>
+              </div>
+
+
+
+
+            </nav>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+    <main>
+      <!--banner-->
+      <div class="Dona3 bannergiallochisiamo">
+        <div class="row">
+          <div class="col-lg-2 col-md-2 col-sm-2">
+            <img th:src="@{static/image/pet1.png}" width="80px" height="auto" />
+          </div>
+          <div class="col-lg-8 col-md-8 col-sm-8" id="centrascritta">
+
+            <h6>
+              La fondazione tutela e garantisce tutti gli animali ospiti anche a livello legale e sociale,
+              <br>
+              assicurandosi che essi soggiornino in un ambiente sano e sereno
+            </h6>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-2">
+            <img th:src="@{static/image/pet2.png}" width="80px" height="auto" />
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-1 col-md-1 col-sm-1"></div>
+        <div class="col-lg-8 col-md-8 col-sm-8 testochisiamo">
+          <h4> Chi siamo </h4>
+          La nostra Fondazione <b><i>Amici a 4 Zampe</i></b> è un canile comunale che nasce nel 2011 a Roma
+          da un gruppo di persone felici di mettere a disposizione le loro professionalità,
+          mossi dall'amore verso gli animali e dal desiderio di far adottare cani in cerca di
+          casa.
+          Il canile collabora con diverse realtà private e pubbliche (come diversi canili del
+          territorio)
+          per supportare gli animali in difficoltà, e cerca di sfruttare il proprio know-how
+          per la realizzazione di programmi di educazione e di informazione su temi quali il rispetto
+          della natura tutta.<br><br>
+          <h4> La nostra missione </h4>
+          In <b><i>Amici a 4 Zampe</i></b> aiutiamo i cani in difficoltà, abbandonati, maltrattati e non
+          rispettati,
+          promuovendo adozioni consapevoli per far adottare cani in cerca di casa.
+          Siamo canile comunale che vuole dare una svolta risolutiva al randagismo
+          con un approccio etico ed etologico al problema, che si prefigge lo scopo
+          di riuscire a far adottare, accudire e creare legami duraturi.
+          Siamo un gruppo affiatato di volontari e professionisti spinti da una passione comune;
+          una veterinaria comportamentalista, operatori ed educatori cinofili.
+          Insieme accompagniamo i nostri amici a quattro zampe in un percorso educativo
+          e d'inserimento verso una nuova vita, all'insegna della salute e serenità per un'adozione
+          consapevole.
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <img th:src="@{static/image/cutedog.jpg}" width="65%" height="auto">
+        </div>
+      </div>
+
+
+
+      <!--cerchi e testo-->
+
+      <div class="cerchi">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-3 col-sm-6 col-12 iter">
+            <img style="border-radius:50%" th:src="@{static/image/phone.png}" width="125px" height="auto" />
+            <h5 class="home">TELEFONO</h5>
+            per informazioni sulle adozioni contattaci:<br> 06 98875859
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-6 col-12 iter">
+            <img style="border-radius:50%" th:src="@{static/image/email.png}" width="125px" height="auto" />
+            <h5 class="home"> EMAIL </h5>
+            amicia4zampe@gmail.com
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-12 iter">
+            <img style="border-radius:50%" th:src="@{static/image/clock.png}" width="125px" height="auto" />
+            <h5 class="home"> ORARI DI APERTURA:</h5>
+            Si chiede gentilmente di rispettare gli orari di visita,
+            tenendo presente che gli ultimi colloqui e giri visitatori si chiudono alle ore 17.30
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-12 iter">
+            <img style="border-radius:50%" th:src="@{static/image/map_icon.png}" width="125px" height="auto" />
+            <h5 class="home">DOVE CI TROVIAMO </h5>
+            Via della Magliana, 856 - 00148 Roma (RM)
+          </div>
+        </div>
+      </div>
+      <!--fine-->
+
+      <!--mappa e orario-->
+      <div class="row testoeora">
+        <h4 class="spazi"> Passa a trovarci: </h4>
+        <div class="col-1 col-md-1 col-sm-1"></div>
+        <div class="col-5 col-md-5 col-sm-5">
+          <iframe src="https://www.google.com/maps/d/embed?mid=1eok5ZlBNWeJbUQxiCdmB7Y0u0_aHfXM&ehbc=2E312F"
+            width="100%" height="100%">
+          </iframe>
+        </div>
+        <div class="col-1 col-md-1 col-sm-1"></div>
+        <div class="col-4 col-md-4 col-sm-4">
+          <div class="orario">
+            <ul class="list-group">
+              <li class="list-group-item listorario active">Orario:</li>
+              <li class="list-group-item bordoora">Lunedì: 10.00-18.00</li>
+              <li class="list-group-item bordoora">Martedì: 10.00-18.00</li>
+              <li class="list-group-item bordoora">Mercoledì: 10.00-18.00</li>
+              <li class="list-group-item bordoora">Giovedì: 10.00-18.00</li>
+              <li class="list-group-item bordoora">Venerdì: 10.00-18.00</li>
+              <li class="list-group-item bordoora">Sabato: 10.00-18.00</li>
+              <li class="list-group-item bordoora">Domenica: 10.00-18.00</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-1 col-md-1 col-sm-1"></div>
+
+      </div>
+
+    </main>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <script>
+      // scrollando in giù di 20 px compare il bottone per tornare su
+      window.onscroll = function () { scrollFunction() };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myBtn").style.display = "block";
+        } else {
+          document.getElementById("myBtn").style.display = "none";
+        }
+
+      }
+
+      // Cliccando il bottone, si torna su 
+      function topFunction() {
+
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+      }
+    </script>
+
+    <!--footer-->
+    <div class="row">
+      <div class="col-lg-10"></div>
+      <div class="col-lg-2">
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Torna su</button>
+      </div>
+    </div>
+
+    <!--footer-->
+    <footer id="footer">
+
+
+      <div class="container">
+        <!--loghi e immagini-->
+        <div class="row icon_center">
+          <div class="col-lg-3 col-md-3 col-sm-3 col-12 padimg">
+            <a th:href="@{/home}" data-bs-toggle="backtop" class="back-to-top">
+              <img th:src="@{static/image/logofooter.png}" width="150px" heigth="auto" id="position" />
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-12 padimg">
+            <img th:src="@{static/image/leidalogobianco.png}" width="120px" heigth="auto" />
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-12 padimg">
+            <img th:src="@{static/image/enpalogo.png}" width="80px" heigth="auto" />
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-12 padimg">
+            <img th:src="@{static/image/ancdvlogo.png}" width="80px" heigth="auto" />
+          </div>
+        </div>
+
+
+        <!--cotenuto footer-->
+        <div class="row footer-align padcontent">
+
+          <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+            <h6>Recapiti e contatti</h6>
+            <div class="col-12">
+              <ul class="elenco">
+                <li>Aperti dal lunedì alla domenica<br>Orario: 10:00 - 18:00</li>
+                <li> Email: amicia4zampe@gmail.com </li>
+                <li>Tel: 06 98875859</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-2 col-12">
+            <h6></h6>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-2 col-12">
+            <h6>Informazioni</h6>
+            <div class="col-12">
+              <ul class="elenco">
+                <li><a class="linkstyle" th:href="@{/privacy}" target="_blank">Privacy policy</a></li>
+                      <li><a class="linkstyle" th:href="@{/cookie}" target="_blank">Cookie policy</a></li>
+                      <li><a class="linkstyle" th:href="@{/faq}" target="_blank">FAQ</a></li>
+                <!-- <li><a class="linkstyle" href="">Termini e condizioni</a></li> -->
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+            <h6></h6>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-2 col-12">
+            <h6>Link utili</h6>
+            <div class="col-12">
+              <ul class="elenco">
+                <li><a class="linkstyle" th:href="@{/chiSiamo}">Chi siamo</a></li>
+                <li><a class="linkstyle" th:href="@{/adozioni}">Adotta un cane</a></li>
+                <li><a class="linkstyle" th:href="@{/donazioni}">Donazioni</a></li>
+                <li><a class="linkstyle" th:href="@{/riservata}">Accesso staff</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <br>
+
+        <div class="row footer_center">
+          <div class="col-lg-2 col-md-2 col-sm-2 col-12"></div>
+          <div class="col-lg-8 col-md-8 col-sm-8 col-12">
+            <p>Amici a 4 zampe S.R.L. Via della Magliana, 856 - 00148 Roma (RM), IT P.IVA IT09677741218
+            </p>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-2 col-12"></div>
+        </div>
+
+        <div class="row footer_center">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-12"></div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+            <p> © 2022 Jarm68. All rights reserved.
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-12"></div>
+        </div>
+
+      </div>
+
+
+    </footer>
+
+</body>
+
+</html>
