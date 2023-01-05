@@ -109,7 +109,7 @@ public class ContextConfiguration implements WebMvcConfigurer
 	public JpaVendorAdapter getJpaVendorAdapter()
 	{
 		HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
-		adapter.setShowSql(true);
+		adapter.setShowSql(false);
 		adapter.setGenerateDdl(false);
 		adapter.setDatabasePlatform(env.getRequiredProperty("hibernate.dialect"));
 		return adapter;
