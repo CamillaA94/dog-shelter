@@ -14,7 +14,6 @@
 }
 
 .titoloiter {
-  color: #4E4D4C;
   text-align: center;
 }
 .tondi{
@@ -27,19 +26,14 @@
 .rece{
   text-align: center;
   color:#737170;
-
-}
-.rece2{
-  text-align: center;
-  color:#737170;
   padding-left: 5%;
 
 }
+
 h3{
   text-align: center;
   padding-top: 5%;
   padding-bottom: 5%;
-  color:#4E4D4C;
 }
 
 
@@ -91,7 +85,7 @@ h3{
 
 #rcorners3 {
   border-radius: 8px;   
-  background-image: url('../dog-shelter/img/dogsBanner-giallonostro.jpg'); 
+  background-image: url('../image/dogsBanner-giallonostro.jpg'); 
   background-position: left top;
   background-repeat: repeat;
   padding: 0.5%;
