@@ -1,0 +1,129 @@
+
+.container{
+    max-width: 90%;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+.img{
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
+    
+}
+
+.accordion{
+    max-width: 100%;
+    margin-bottom: 70px;
+    
+}
+
+.accordion-button:not(.collapsed){
+    background-color: #519B8A;
+    color: white;
+}
+
+.accordion-button:focus{
+    box-shadow: none !important;
+    border: #519B8A 2px solid;
+}
+
+img.flex{
+    max-width: 100%;
+}
+
+button.accordion-button.collapsed{
+    background-color:#519B8A;
+    color: white;
+}
+.Dona2{
+    	background-color: #FBB74D;
+    	padding-top: 6%;
+   		margin-top:2.4%;
+    	padding-bottom: 0.5%;
+    	margin-bottom: 5%;
+    	text-align: center;
+    	color: black;
+}
+.row{
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+/*media bannergiallochisiamo per padding top dalla navbar*/
+@media screen and (max-width:1676px) {
+
+    .bannergiallo{ padding-top: 7%!important;
+    }
+}
+@media screen and (max-width:1560px) {
+
+    .bannergiallo{ padding-top: 7.5%!important;
+    }
+}
+@media screen and (max-width:1451px) {
+
+    .bannergiallo{ padding-top: 8%!important;
+    }
+}
+@media screen and (max-width:1350px) {
+
+    .bannergiallo{ padding-top: 9%!important;
+    }
+}
+@media screen and (max-width:1230px) {
+
+    .bannergiallo{ padding-top: 10%!important;
+    }
+}
+@media screen and (max-width:1120px) {
+
+    .bannergiallo{ padding-top: 11%!important;
+    }
+}
+@media screen and (max-width:1010px) {
+
+    .bannergiallo{ padding-top: 12%!important;
+    }
+}
+
+@media screen and (max-width:920px) {
+
+    .bannergiallo{ padding-top: 13%!important;
+    }
+}
+@media screen and (max-width:810px) {
+
+    .bannergiallo{ padding-top: 13%!important;
+    }
+}
+@media screen and (max-width:720px) {
+
+    .bannergiallo{ padding-top: 14%!important;
+    }
+}
+@media screen and (max-width:620px) {
+
+    .bannergiallo{ padding-top: 15%!important;
+    }
+}
+@media screen and (max-width:520px) {
+
+    .bannergiallo{ padding-top: 16%!important;
+    }
+}
+@media screen and (max-width:420px) {
+
+    .bannergiallo{ padding-top: 20%!important;
+    }
+}
+@media screen and (max-width:330px) {
+
+    .bannergiallo{ padding-top: 25%!important;
+    }
+}
+@media screen and (max-width:280px) {
+
+    .bannergiallo{ padding-top: 30%!important;
+    }
+}
