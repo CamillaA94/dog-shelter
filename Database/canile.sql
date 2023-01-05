@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Gen 05, 2023 alle 12:57
+-- Creato il: Gen 05, 2023 alle 16:21
 -- Versione del server: 10.4.25-MariaDB
 -- Versione PHP: 8.1.10
 
@@ -38,7 +38,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`) VALUES
-(1, 'gianluca', '123');
+(1, 'admin', '1234');
 
 -- --------------------------------------------------------
 
@@ -65,7 +65,7 @@ CREATE TABLE `cani` (
 
 INSERT INTO `cani` (`id`, `nome`, `razza`, `eta`, `sesso`, `sterilizzazione`, `vaccinazioni`, `microchip`, `descrizione`, `arrivo`) VALUES
 (1, 'Jack', 'Labrador retriever', 2, 'M', 0, 'Parvovirus canino, Cimurro canino, Epatite, Leptospirosi, Rabbia, Bordetella, Influenza canina, Vaccino di Lyme', 1, 'Solare, pieno di vita e affettuoso con tutti', '2022-10-14'),
-(2, 'Aki', 'Siberian Husky', 7, 'M', 0, 'Parvovirus canino, Cimurro canino, Epatite, Leptospirosi, Rabbia, Bordetella, Influenza canina', 1, 'Esuberante e allegro. Patisce moltissimo la reclusione e la solitudine in canile, ha bisogno di una figura di riferimento che gli trasmetta affetto e sicurezza', '2016-06-23'),
+(2, 'Aki', 'Siberian Husky', 7, 'M', 0, 'Parvovirus canino, Cimurro canino, Epatite, Leptospirosi, Rabbia, Bordetella, Influenza canina', 1, 'Esuberante e allegro. Patisce moltissimo la reclusione e la solitudine in canile, ha bisogno di una figura di riferimento che gli trasmetta affetto e sicurezza', '2020-09-23'),
 (3, 'Stella', 'American staffordshire terrier', 4, 'F', 1, 'Parvovirus canino, Cimurro canino, Epatite, Leptospirosi, Rabbia, Bordetella, Influenza canina, Vaccino di Lyme, Leishmania', 1, 'Timorosa e docile. Ha subito maltrattamenti e ha bisogno di tempo per instaurare un legame di fiducia', '2021-06-17'),
 (4, 'Rocky', 'Beagle', 9, 'M', 0, 'Parvovirus canino, Cimurro canino, Epatite, Leptospirosi, Rabbia, Leishmania', 1, 'Socievole e giocherellone con le persone, tende ad essere aggressivo con gli altri animali', '2017-03-02'),
 (5, 'Zelda', 'Labrador retriever', 5, 'F', 1, 'Parvovirus canino, Cimurro canino, Epatite, Leptospirosi, Rabbia, Bordetella, Influenza canina, Vaccino di Lyme, Leishmania', 1, 'Piena di energie, equilibrata e socievole con le persone', '2022-02-10'),
@@ -76,7 +76,7 @@ INSERT INTO `cani` (`id`, `nome`, `razza`, `eta`, `sesso`, `sterilizzazione`, `v
 (10, 'Zeus', 'Golden retriever', 2, 'M', 0, 'Parvovirus canino, Cimurro canino, Epatite, Leptospirosi, Rabbia, Influenza canina, Vaccino di Lyme, Leishmania', 1, 'Affettuoso e calmo. Soffre di una lieve forma di displasia dell\'anca', '2021-06-22'),
 (11, 'Jason', 'Meticcio', 6, 'M', 1, 'Parvovirus canino, Cimurro canino, Epatite, Leptospirosi, Rabbia, Vaccino di Lyme, Leishmania', 1, 'Vivace e goloso. Soffre di epilessia ereditaria', '2021-08-02'),
 (12, 'Diana', 'Bulldog francese', 2, 'F', 0, 'Parvovirus canino, Cimurro canino, Epatite, Leptospirosi, Rabbia, Vaccino di Lyme, Leishmania', 1, 'Insicura e schiva, ha passato quasi tutta la vita in canile e ha bisogno di qualcuno che gli doni cure e affetto', '2022-05-11'),
-(13, 'Ruby', 'Meticcio', 4, 'F', 1, 'Parvovirus canino, Cimurro canino, Epatite, Leptospirosi, Rabbia, Bordetella, Influenza canina, Vaccino di Lyme, Leishmania', 1, 'Atletica e giocherellona, ama la compagnia degli altri cani', '2022-06-22'),
+(13, 'Ruby', 'Meticcio', 4, 'F', 1, 'Parvovirus canino, Cimurro canino, Epatite, Leptospirosi, Rabbia, Bordetella, Influenza canina, Vaccino di Lyme, Leishmania', 1, 'Atletica e giocherellona, ama la compagnia degli altri cani', '2022-12-07'),
 (14, 'Leo', 'Meticcio', 2, 'M', 0, 'Parvovirus canino, Cimurro canino, Epatite, Leptospirosi, Rabbia, Bordetella, Influenza canina', 1, 'Timido e molto pigro, ma in grado di donare tantissimo affetto', '2021-12-03'),
 (15, 'Joy', 'Pitbull terrier', 5, 'F', 0, 'Parvovirus canino, Cimurro canino, Epatite, Leptospirosi, Rabbia, Bordetella, Influenza canina, Vaccino di Lyme, Leishmania', 1, 'Piena di energia, vivace, giocherellona e socievole', '2022-09-08'),
 (16, 'Zoe', 'Labrador retriever', 3, 'F', 1, 'Parvovirus canino, Cimurro canino, Epatite, Leptospirosi, Rabbia, Bordetella, Leishmania', 1, 'Schiva e timorosa, ha bisogno di coccole e carezze per iniziare a fidarsi delle persone', '2021-12-14'),
