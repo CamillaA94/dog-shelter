@@ -22,7 +22,6 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-.DS_Store
 .classpath
 .project
 # Java annotation processor (APT)
@@ -30,4 +29,3 @@ hs_err_pid*
 
 bin/
 .settings/
-img/6366337_dog_animal_dalmatian_pedigree_breed_pet_purebred.png

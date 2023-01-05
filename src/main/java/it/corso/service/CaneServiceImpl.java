@@ -127,7 +127,7 @@ public class CaneServiceImpl implements CaneService {
 
 	@Override
 	public boolean checkCane(String... dati) {
-		if(!dati[0].isEmpty() && !dati[1].isEmpty() && !dati[2].isEmpty())
+		if(dati[0] != "" && dati[1] != "" && dati[2] != "")
 			if(Pattern.matches(REGEX, dati[0]) && Pattern.matches(REGEX, dati[1]) && Pattern.matches(REGEXD, dati[2])) 
 				return true;
 		return false;

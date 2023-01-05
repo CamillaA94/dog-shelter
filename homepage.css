@@ -1,0 +1,158 @@
+/* pagina chi siamo*/
+.testochi {
+    background-color: #519B8A;
+    color: white;
+    padding: 1.5%;
+    border-radius: 3%;
+    border-width: 20%;
+}
+
+.container {
+    margin-top: 3%;
+    margin-left: 1%;
+    margin-right:1%;
+}
+.fotochi{
+    padding-right: 1%;
+}
+/*pagina donazioni*/
+
+.testoDonaz {
+    background-color: #519B8A;
+    color: white;
+    padding: 5%;
+    border-radius: 2%;
+}
+
+.padfoto {
+    padding-top: 1%;
+}
+
+.Dona2{
+    background-color: #FBB74D;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-top:0;
+    margin-bottom: 5%;
+    text-align: center;
+    color: black;
+}
+
+.titoloiter {
+    text-align:center;
+    padding-top: 8%;
+    padding-bottom: 5%;
+}
+.iter {
+    text-align: center;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.home {
+    padding-top: 5%;
+}
+.posfoto {
+    padding-top: 10%;
+}
+/*chi siamo*/
+.mappa {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 50%;
+    width: 90%;
+}
+.orario {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-right: 10%;
+    padding-right: 10%;   
+}
+/*colore orario*/
+.list-group-item {
+    background-color: #ffffff;
+    border-color:black ;
+}
+
+.list-group-item.active {
+    background-color: #519B8A;
+}
+
+
+/* CARD ADOZIONI */
+.profile-card-4 {
+    max-width: 300px;
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+.profile-card-4 img {
+    transition: all 0.25s linear;
+}
+
+.profile-card-4 .profile-content {
+    position: relative;
+    padding: 15px;
+    background-color: #FFF;
+}
+
+.profile-card-4 .profile-name {
+    font-weight: bold;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: -70px;
+    color: #FFF;
+    font-size: 17px;
+}
+
+.profile-card-4 .profile-name p {
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+}
+
+.profile-card-4 .profile-description {
+    color: #777;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.profile-card-4 .profile-overview {
+    padding: 15px 0px;
+}
+
+.profile-card-4 .profile-overview p {
+    font-size: 10px;
+    font-weight: 600;
+    color: #777;
+}
+
+.profile-card-4 .profile-overview h4 {
+    color: #273751;
+    font-weight: bold;
+}
+
+.profile-card-4 .profile-content::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    top: -10px;
+    left: 0px;
+    right: 0px;
+    background-color: #FFF;
+    z-index: 0;
+    transform: skewY(3deg);
+}
+
+.profile-card-4:hover img {
+    transform: rotate(5deg) scale(1.1, 1.1);
+    filter: brightness(110%);
+}
+
+/*fine card*/

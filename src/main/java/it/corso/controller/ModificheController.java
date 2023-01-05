@@ -25,11 +25,9 @@ public class ModificheController {
 			Model model, 
 			HttpSession session, 
 			@RequestParam(name = "id", required = false) Integer id,
-			@RequestParam(name = "er", required = false) String er,
-			@RequestParam(name = "cer", required = false) String cer)
+			@RequestParam(name = "er", required = false) String er)
 	{
 		boolean errore = er != null;
-		boolean errorecar = cer != null;
 		if(session.getAttribute("logged") == null)
 			return "redirect:/login";
 		Cane cane = id != null && id != 0 ? caneService.getCaneById(id) : new Cane();
@@ -51,7 +49,6 @@ public class ModificheController {
 		model.addAttribute("cane", cane);
 		model.addAttribute("cani", caneService.getCaniAlfabetico());
 		model.addAttribute("errore", errore);
-		model.addAttribute("errorecar", errorecar);
 		return "modifiche";
 	}
 	
@@ -77,12 +74,12 @@ public class ModificheController {
 			@RequestParam(name = "immagine3", required = false) MultipartFile immagine3,
 			HttpSession session)
 	{
-		if(!caneService.checkCane(nome, razza, descrizione))
-			return "redirect:/modifiche?cer";
+		if(!caneService.checkCane(nome, razza, descrizione) || vax == null)
+			return "redirect:/modifiche?er";
 		String rootDir = session.getServletContext().getRealPath("/");
 		String filePath = rootDir + "static\\cani\\" + id + ".png";
 		File file = new File(filePath);
-		if(!file.exists() && (immagine.isEmpty() || immagine == null || vax == null))
+		if(!file.exists() && (immagine.isEmpty() || immagine == null))
 			return "redirect:/modifiche?er";
 		Cane cane = id != 0 ? caneService.getCaneById(id) : new Cane();
 		caneService.registraCane(cane, id, nome, razza, eta, sesso, sterilizzazione, vax, microchip, descrizione, data);
