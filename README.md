@@ -1,5 +1,6 @@
 # dog-shelter
 Web app per un canile con gestione area admin e call to action per invogliare utenti ad adottare
+
 ## contenuti
 1. [Informazioni generali]
 2. [Tecnologie]
@@ -24,8 +25,9 @@ Lista delle tecnologie utilizzare all'interno del progetto:
  [CSS]
  [JavaScript]
  [Java]
+ [MySQL]
  [Thymeleaf]
- [Srping Tool Suite]
+ [Spring Tool Suite]
  [Visual Studio Code]
  [GitHub]
  
@@ -36,10 +38,11 @@ Lista delle tecnologie utilizzare all'interno del progetto:
 Repository e istruzioni per l'installazione del progetto in locale
 
 ```
-$ git clone https://github.com/CamillaA94/dog-shelter.git
-$ cd ../path/to/the/file
-$ npm install
-$ npm start
+$ Link repository github: https://github.com/CamillaA94/dog-shelter.git
+$ Creare database importando il file nella cartella database (canile.sql)
+$ Importare il progetto in Spring Tool Suite (File, Open projects from file system, scegliere directory e importare)
+$ Avviare il server e avviare il browser all'url "localhost:8080/canile"
+
 ```
 
 
